@@ -8,6 +8,6 @@ class TelaPrincipalController extends Controller
 {
     public function mostrarView()
     {
-        return view('telaPrincipal.tela');
+        return view('sectionsTelaPrincipal.card');
     }
 }
