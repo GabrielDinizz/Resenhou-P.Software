@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TelaPrincipalController;
+use App\Http\Controllers\CardController;
 
-Route::get('/', [TelaPrincipalController::class, 'mostrarView']);
+Route::get('/', [CardController::class, 'index']);
 
