@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CardController;
+use App\Http\Controllers\TelaPrincipalController;
 
-Route::get('/', [CardController::class, 'index']);
+Route::get('/', [TelaPrincipalController::class, 'index']);
 
