@@ -10,8 +10,8 @@ class TelaPrincipalController extends Controller
     public function index()
     {
         $cards = Card::all();
-        $cardView = view('sectionsTelaPrincipal.card', compact('cards')); // Carrega a view 'sectionsTelaPrincipal.card' com os dados dos cartões
+        $cardView = view('sectionsTelaPrincipal.card', compact('cards'));
 
-        return view('layouts.TelaPrincipal', ['card' => $cardView]); // Passa a view carregada para 'layouts.TelaPrincipal'
+        return view('layouts.TelaPrincipal', ['card' => $cardView]); 
     }
 }

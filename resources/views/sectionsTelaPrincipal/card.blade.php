@@ -27,16 +27,6 @@
                 <h2>Saiba Mais</h2>
             </div>
         </div>
-
-        <div class="card">
-            <div class="div-img-card">
-                <img src="https://www.designi.com.br/images/preview/10163398.jpg" alt="">
-            </div>
-            <div class="descricao-card">
-                <p>Resenha Hoje</p>
-                <h2>Saiba Mais</h2>
-            </div>
-        </div>
     </div>
     <div class="div-refresh">
         <img src="{{ asset('assets/refresh.png') }}">
