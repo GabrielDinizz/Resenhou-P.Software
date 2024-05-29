@@ -212,7 +212,16 @@
 
             <div class="footer-column">
                 <h3 id="textform">SAC</h3>
-                
+                <form action="{{ route('sac.store') }}" method="POST">
+                    @csrf
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome"><br>
+
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem"></textarea><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     </footer>
