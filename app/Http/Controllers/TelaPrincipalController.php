@@ -8,6 +8,7 @@ class TelaPrincipalController extends Controller
 {
     public function mostrarView()
     {
-        return view('sectionsTelaPrincipal.card');
+        return view('layouts.TelaPrincipal')
+            ->with('card', view('sectionsTelaPrincipal.card'));
     }
 }
