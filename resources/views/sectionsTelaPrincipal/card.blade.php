@@ -8,7 +8,7 @@
     @foreach ($cards as $card)
         <div class="card">
             <div class="div-img-card">
-                <img src="https://araujoviannaoficial.com.br/wp-content/uploads/2022/12/1C8A4F7E-D2DB-434B-A848-A1AD8173B2D1.png"
+                <img src="{{$card->imgURL}}"
                     alt="">
             </div>
             <div class="descricao-card">
@@ -18,15 +18,6 @@
             </div>
         </div>
     @endforeach 
-        <div class="card">
-            <div class="div-img-card">
-                <img src="https://www.designi.com.br/images/preview/10312743.jpg" alt="">
-            </div>
-            <div class="descricao-card">
-                <p>Resenha Hoje</p>
-                <h2>Saiba Mais</h2>
-            </div>
-        </div>
     </div>
     <div class="div-refresh">
         <img src="{{ asset('assets/refresh.png') }}">

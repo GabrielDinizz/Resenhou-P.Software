@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');	
-            $table->string('data');
+            $table->string('titulo')->nullable(false);	
+            $table->string('data')->nullable(false);
+            $table->string('imgURL')->nullable(false);
             $table->timestamps();
         });
     }

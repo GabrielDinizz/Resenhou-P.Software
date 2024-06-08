@@ -24,6 +24,6 @@ class SacController extends Controller
             'mensagem' => $request->mensagem,
         ]);
 
-        return redirect()->route('sac.create')->with('success', 'Mensagem enviada com sucesso!');
+        return redirect('/')->with('success', 'Mensagem enviada com sucesso!');
     }
 }

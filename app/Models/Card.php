@@ -9,5 +9,9 @@ class Card extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['titulo', 'data'];
+    protected $fillable = [
+        'titulo',
+         'data',
+         'imgURL'
+    ];
 }
