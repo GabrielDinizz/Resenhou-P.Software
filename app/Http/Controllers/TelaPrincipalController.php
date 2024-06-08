@@ -9,9 +9,15 @@ class TelaPrincipalController extends Controller
 {
     public function index()
     {
-        $cards = Card::all();
-        $cardView = view('sectionsTelaPrincipal.card', compact('cards'));
+        $cardView = $this->renderCardSection();
 
-        return view('layouts.TelaPrincipal', ['card' => $cardView]); 
+        return view('layouts.TelaPrincipal', [
+            'card' => $cardView
+        ]); 
+    }
+
+    private function renderCardSection() {
+        $cards = Card::all();
+        return $cardView = view('sectionsTelaPrincipal.card', compact('cards'));
     }
 }
