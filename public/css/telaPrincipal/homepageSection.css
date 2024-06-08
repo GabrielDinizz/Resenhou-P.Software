@@ -1,0 +1,6 @@
+#homepage {
+    background-image: url('../../assets/homepage.png');
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

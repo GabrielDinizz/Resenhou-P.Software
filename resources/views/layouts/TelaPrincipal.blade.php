@@ -7,9 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/cardSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/rodapeSection.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/telaPrincipal/homepageSection.css') }}">
 </head>
 
 <body>
+    <section id="homepage">
+        <header>
+
+        </header>
+        <div>
+
+        </div>
+    </section>
 
     <main>
         @yield('card')
