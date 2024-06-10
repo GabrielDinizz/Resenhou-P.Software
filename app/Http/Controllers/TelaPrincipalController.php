@@ -12,7 +12,8 @@ class TelaPrincipalController extends Controller
         $cardView = $this->renderCardSection();
 
         return view('layouts.TelaPrincipal', [
-            'card' => $cardView
+            //porque se eu mudo o nome do 'cards' nao altera o resultado?
+            'cards' => $cardView
         ]); 
     }
 

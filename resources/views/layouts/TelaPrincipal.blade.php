@@ -11,14 +11,8 @@
 </head>
 
 <body>
-    <section id="homepage">
-        <header>
-
-        </header>
-        <div>
-
-        </div>
-    </section>
+        <!-- Como posso fazer uma regra de negocio na qual fique simples adicionar os 'modulos' da pagina -->
+        @include('sectionsTelaPrincipal.homepage')
 
     <main>
         @yield('card')
