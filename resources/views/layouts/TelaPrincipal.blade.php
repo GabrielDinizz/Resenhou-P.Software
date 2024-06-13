@@ -15,7 +15,7 @@
         @include('sectionsTelaPrincipal.homepage')
 
     <main>
-        @yield('card')
+        <x-card :cards="$cards" nome="Fernando"/>
     </main>
 
     <footer>
