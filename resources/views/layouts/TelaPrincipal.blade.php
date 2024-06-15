@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/cardSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/rodapeSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/homepageSection.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/telaPrincipal/style.css') }}">
 </head>
 
 <body>
         <!-- Como posso fazer uma regra de negocio na qual fique simples adicionar os 'modulos' da pagina -->
-        @include('sectionsTelaPrincipal.homepage')
-
+        <x-homepage />
     <main>
         <x-card :cards="$cards" nome="Fernando"/>
     </main>

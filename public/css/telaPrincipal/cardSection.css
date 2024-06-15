@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-h1 {
+.titleCard {
     font-family: 'Days One';
     font-size: 4rem;
     font-weight: 500;
@@ -28,9 +28,6 @@ h1 span {
     justify-content: center;
 }
 
-.card {
-    width: 20%;
-}
 
 .div-img-card {
     width: 100%;

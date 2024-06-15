@@ -24,13 +24,13 @@ class DatabaseSeeder extends Seeder
         Card::create([
             'titulo' => 'Péricles Céu Lilas',
             'data' => 'Amanhã',
-            'imgURL' => 'https://laravel.com/img/logotype.min.svg' 
+            'imgURL' => 'https://folhadecuritiba.com.br/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-04-at-11.05.54-jpeg.webp' 
         ]);
 
         Card::create([
             'titulo' => 'Baile Funk Mc Pedrinho',
             'data' => 'Daqui uma semana',
-            'imgURL' => 'https://laravel.com/img/logotype.min.svg' 
+            'imgURL' => 'https://www.designi.com.br/images/preview/10312743.jpg' 
         ]);        
     }
 }
