@@ -1,5 +1,6 @@
-    <div>
-        <h1><span>PROXIMAS</span> RESENHAS</h1>
+<section>
+   <div>
+        <h1 class="titleCard"><span>PROXIMAS</span> RESENHAS</h1>
     </div>
     <div class="flex-card"> {{ $attributes['nome'] }}
     @foreach ($attributes['cards'] as $card)
@@ -19,3 +20,4 @@
     <div class="div-refresh">
         <img src="{{ asset('assets/refresh.png') }}">
     </div>
+</section>
