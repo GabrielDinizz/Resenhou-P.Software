@@ -1,0 +1,97 @@
+.container-eventos {
+    width: 100%;
+}
+
+.grid-eventos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 4rem;
+    margin-top: 8rem;
+}
+
+.img-cardList {
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.img-cardList img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.descricao-cardList {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+    background-color: #9A2DCB;
+    position: relative;
+    top: -1rem;
+    z-index: -1;
+    border-radius: 0 0rem .5rem .5rem;
+}
+
+.text-cardList {
+    font-family: 'Days One';
+    color: white;
+    width: 100%;
+}
+
+.title-cardList h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.preco-cardList {
+    display: flex;
+    justify-content: end;
+    gap: 2%;
+}
+
+.preco-cardList div {
+    background-color: #F7317D;
+    padding: .5rem;
+    border-radius: 50px;
+    font-weight: 200;
+}
+
+.data-cardList {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-cardList p{
+    font-family: 'Roboto';
+    color: white;
+
+}
+
+.data-cardList h3{
+    font-family: 'Roboto';
+    color: white;
+    font-size: 2rem;
+}
+
+.data-cardList h4{
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.localizacaoEvent {
+    display: flex;
+    padding-bottom: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.localizacaoEvent img{
+    height: 1rem;
+}
