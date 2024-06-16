@@ -1,0 +1,53 @@
+a {
+    text-decoration: none;
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div input{
+    padding: .6rem 3rem;
+    border-radius: 30px;
+    border-style: none;
+    margin-left: 1rem;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    gap: 4rem;
+    justify-content: end;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav div p{
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    font-family: 'Days One';
+}
+
+nav div button{
+    padding: .9rem 2rem;
+    background-color: #F7317D;
+    color: white;
+    border-radius: 30px;
+    border-style: none;
+    font-family: 'Days One';
+    font-size: 1rem;
+}

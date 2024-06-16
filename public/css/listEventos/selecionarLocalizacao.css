@@ -1,0 +1,44 @@
+.containerLocalizacao {
+    display: flex;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.titleLocalizacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+}
+
+.imgLocalizacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.titleLocalizacao h2{
+    font-family: 'Days One';
+    color: #ffff;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.titleLocalizacao button {
+    background-color: #F7317D;
+    font-size: 2rem;
+    border-radius: 100px;
+    border-style: none;
+    padding: 1rem 1rem;
+    color: #ffff;
+    font-family: 'Days One';
+    width: 80%;
+    cursor: pointer;
+}
+
+.spanArea {
+    color: #F7317D;
+}
