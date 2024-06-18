@@ -1,9 +1,11 @@
 <section>
     <div class="container-eventos">
         <div class="grid-eventos">
+        
+        @foreach ($attributes['cards'] as $card)
             <div class="card-listEventos">
                 <div class="img-cardList">
-                    <img src="https://pbs.twimg.com/media/GDBNeOMW8AAJDKq.jpg" alt="">
+                    <img src="{{$card->imgURL}}" alt="">
                 </div>
                 <div class="descricao-cardList">
                     <div class="data-cardList">
@@ -31,6 +33,8 @@
                     </div>
                 </div>
             </div>
+        @endforeach
+            
         </div>
     </div>
 </section>
