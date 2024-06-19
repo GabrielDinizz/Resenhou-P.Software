@@ -2,9 +2,8 @@
    <div>
         <h1 class="titleCard"><span>PROXIMAS</span> RESENHAS</h1>
     </div>
-    <div class="flex-card"> {{ $attributes['nome'] }}
-    <!-- Como limitar o foreach -->
-    @foreach ($attributes['cards'] as $card)
+    <div class="flex-card"> {{ $nome }}
+    @foreach ($cards as $card)
         <div class="card">
             <div class="div-img-card">
                 <img src="{{$card->imgURL}}"

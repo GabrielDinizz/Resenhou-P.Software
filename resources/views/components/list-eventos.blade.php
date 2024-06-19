@@ -1,3 +1,4 @@
+<!-- <x-card cont="0"/> -->
 <section>
     <div class="container-eventos">
         <div class="grid-eventos">

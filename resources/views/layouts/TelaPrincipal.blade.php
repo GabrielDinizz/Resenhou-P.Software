@@ -18,7 +18,8 @@
         <x-homepage />
     <main>
         <x-carousel />
-        <x-card :cards="$cards" nome="Fernando"/>
+        <!-- O que eu coloco no component diretamente é um atributo -->
+        <x-card cont="3"/>
     </main>
 
     <footer>
