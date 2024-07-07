@@ -22,21 +22,21 @@ class Card extends Component
      */
     public function render(): View|Closure|string
     {
-        $cards = null;
+        $eventos = null;
 
         if( $this->cont == 0) {
             //renomear a tabela card para evento
-            $cards = \App\Models\Card::get(); // Defina seus dados de cards aqui
+            $eventos = \App\Models\Evento::get(); // Defina seus dados de cards aqui
         }
         else {
-            $cards = \App\Models\Card::limit($this->cont)->get();
+            $eventos = \App\Models\Evento::limit($this->cont)->get();
         }
         
         $nome = "Fernando";
 
         return view('components.card', [
             //variavel para view
-            'cards' => $cards,
+            'eventos' => $eventos,
             'nome' => $nome
         ]);
 

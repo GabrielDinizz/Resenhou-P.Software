@@ -3,10 +3,10 @@
     <div class="container-eventos">
         <div class="grid-eventos">
         
-        @foreach ($attributes['cards'] as $card)
+        @foreach ($attributes['eventos'] as $evento)
             <div class="card-listEventos">
                 <div class="img-cardList">
-                    <img src="{{$card->imgURL}}" alt="">
+                    <img src="{{$evento->imgURL}}" alt="">
                 </div>
                 <div class="descricao-cardList">
                     <div class="data-cardList">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="text-cardList">
                         <div class="title-cardList">
-                            <h2>Arena Festival</h2>
+                            <h2>{{ $evento->nome }}</h2>
                             <div class="localizacaoEvent">
                                 <img src="{{ asset('assets/localizacao-icon.svg') }}">
                                 <p>RJ - Rocinha</p>

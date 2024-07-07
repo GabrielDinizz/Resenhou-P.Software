@@ -3,16 +3,16 @@
         <h1 class="titleCard"><span>PROXIMAS</span> RESENHAS</h1>
     </div>
     <div class="flex-card"> {{ $nome }}
-    @foreach ($cards as $card)
+    @foreach ($eventos as $evento)
         <div class="card">
             <div class="div-img-card">
-                <img src="{{$card->imgURL}}"
+                <img src="{{$evento->imgURL}}"
                     alt="">
             </div>
             <div class="descricao-card">
                
-                <p>{{$card->data}}</p>
-                <h2>{{$card->titulo}}</h2>
+                <p>Daqui ...</p>
+                <h2>{{$evento->nome}}</h2>
             </div>
         </div>
     @endforeach 
