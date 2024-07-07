@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/cardSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/rodapeSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/homepageSection.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ComponentsCSS/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     
 </head>
@@ -18,7 +18,8 @@
         <x-homepage />
     <main>
         <x-carousel />
-        <x-card :cards="$cards" nome="Fernando"/>
+        <!-- O que eu coloco no component diretamente é um atributo -->
+        <x-card cont="3"/>
     </main>
 
     <footer>

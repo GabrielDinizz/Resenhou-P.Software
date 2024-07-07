@@ -12,7 +12,6 @@
 <body>
     <x-header/>
     <x-selecionar-localizacao/>
-    <x-list-eventos/>
-    
+    <x-list-eventos :cards="$cards"/>
 </body>
 </html>
