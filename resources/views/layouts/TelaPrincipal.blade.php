@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/cardSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/rodapeSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/telaPrincipal/homepageSection.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ComponentsCSS/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     
 </head>

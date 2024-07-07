@@ -6,6 +6,7 @@ use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Card;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,11 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        /*User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);*/
-
+        //Eventos
         Card::create([
             'titulo' => 'Péricles Céu Lilas',
             'data' => 'Amanhã',
@@ -57,5 +54,12 @@ class DatabaseSeeder extends Seeder
             'imgURL' => 'https://s3.guicheweb.com.br/imagenseventos/04-09-2023_09-38-08.jpg' 
         ]);
 
+        //Login 
+        //?o que é esse Hash?
+        User::factory()->create([
+            'name' => 'Papaleguas',
+            'email' => 'acme@acme.com',
+            'password' => Hash::make('123456')
+        ]);
     }
 }
