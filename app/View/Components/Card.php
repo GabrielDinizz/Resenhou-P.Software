@@ -12,7 +12,7 @@ class Card extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public int $cont)
+    public function __construct(public int $cont, public bool $isPaginate = false)
     {
         
     }
@@ -25,19 +25,19 @@ class Card extends Component
         $eventos = null;
 
         if( $this->cont == 0) {
-            //renomear a tabela card para evento
             $eventos = \App\Models\Evento::get(); // Defina seus dados de cards aqui
         }
         else {
-            $eventos = \App\Models\Evento::limit($this->cont)->get();
+            if ($this->isPaginate) {
+                $eventos = \App\Models\Evento::paginate($this->cont);
+            } else {
+                $eventos = \App\Models\Evento::limit($this->cont)->get();
+            }
         }
-        
-        $nome = "Fernando";
-
+                
         return view('components.card', [
             //variavel para view
-            'eventos' => $eventos,
-            'nome' => $nome
+            'eventos' => $eventos
         ]);
 
     }

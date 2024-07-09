@@ -12,6 +12,6 @@
 <body>
     <x-header/>
     <x-selecionar-localizacao/>
-    <x-list-eventos :eventos="$eventos"/>
+    <x-card cont="2" isPaginate="true" />
 </body>
 </html>
