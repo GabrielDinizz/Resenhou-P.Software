@@ -1,9 +1,9 @@
-<!-- <x-card cont="0"/> -->
+{{-- resources/views/components/card.blade.php --}}
 <section>
     <div class="container-eventos">
         <div class="grid-eventos">
-        
-        @foreach ($attributes['eventos'] as $evento)
+            @if($eventos->count() > 0)
+            @foreach ($eventos as $evento)
             <div class="card-listEventos">
                 <div class="img-cardList">
                     <img src="{{$evento->imgURL}}" alt="">
@@ -20,12 +20,12 @@
                             <h2>{{ $evento->nome }}</h2>
                             <div class="localizacaoEvent">
                                 <img src="{{ asset('assets/localizacao-icon.svg') }}">
-                                <p>RJ - Rocinha</p>
+                                <p>{{ $evento->local }}</p>
                             </div>
                         </div>
                         <div class="preco-cardList">
                             <div>
-                                $55,66
+                                R${{ $evento->valor }}
                             </div>
                             <div>
                                 Comprar
@@ -34,8 +34,14 @@
                     </div>
                 </div>
             </div>
-        @endforeach
-            
+            @endforeach
+            @else
+            <p>Sem eventos disponíveis.</p>
+            @endif
         </div>
+    </div>
+    <!-- Renderiza os links de paginação -->
+    <div class="pagination-links">
+        {{ $eventos->links() }}
     </div>
 </section>
