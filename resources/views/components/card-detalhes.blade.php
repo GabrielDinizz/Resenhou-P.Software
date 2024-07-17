@@ -10,10 +10,10 @@
                 </div>
                 <div class="descricao-cardList">
                     <div class="data-cardList">
-                        <p>SEX</p>
-                        <h3>13</h3>
-                        <p>SET</p>
-                        <h4>21:00</h4>
+                        <p>{{ date('D', $evento->data) }}</p> <!-- Dia da semana -->
+                        <h3>{{ date('d', $evento->data) }}</h3> <!-- Dia do mês -->
+                        <p>{{ date('M', $evento->data) }}</p> <!-- Mês -->
+                        <h4>{{ date('H:i', $evento->data) }}</h4> <!-- Hora -->
                     </div>
                     <div class="text-cardList">
                         <div class="title-cardList">
@@ -25,7 +25,7 @@
                         </div>
                         <div class="preco-cardList">
                             <div>
-                                R${{ $evento->valor }}
+                                ${{ number_format($evento->valor, 2, ',', '.') }}
                             </div>
                             <div>
                                 Comprar
@@ -42,6 +42,36 @@
     </div>
     <!-- Renderiza os links de paginação -->
     <div class="pagination-links">
-        {{ $eventos->links() }}
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <!-- Botão Anterior -->
+                <li class="page-item {{ $eventos->onFirstPage() ? 'disabled' : '' }}">
+                    <a class="page-link" href="{{ $eventos->previousPageUrl() }}" aria-label="Anterior">
+                        <span aria-hidden="true">Anterior</span>
+                    </a>
+                </li>
+
+                <!-- Numeração das Páginas -->
+                @for ($i = 1; $i <= $eventos->lastPage(); $i++)
+                    @if ($i == $eventos->currentPage())
+                    <li class="page-item active">
+                        <a class="page-link" href="#">{{ $i }}</a>
+                    </li>
+                    @else
+                    <li class="page-item">
+                        <a class="page-link" href="{{ $eventos->url($i) }}">{{ $i }}</a>
+                    </li>
+                    @endif
+                    @endfor
+
+                    <!-- Botão Próximo -->
+                    <li class="page-item {{ $eventos->hasMorePages() ? '' : 'disabled' }}">
+                        <a class="page-link" href="{{ $eventos->nextPageUrl() }}" aria-label="Próximo">
+                            <span aria-hidden="true">Próximo</span>
+                        </a>
+                    </li>
+            </ul>
+        </nav>
     </div>
+
 </section>

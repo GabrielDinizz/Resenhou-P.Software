@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/listEventos/selecionarLocalizacao.css') }}">
     <link rel="stylesheet" href="{{ asset('css/listEventos/listEventos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/componentsCSS/paginacao.css') }}">
 </head>
 <body>
     <x-header/>

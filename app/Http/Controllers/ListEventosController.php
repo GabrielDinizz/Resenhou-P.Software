@@ -10,7 +10,7 @@ class ListEventosController extends Controller
 {
     public function index(Request $request)
     {
-        $cont = $request->input('cont', 4);
+        $cont = $request->input('cont', 2);
         $isPaginate = $request->input('isPaginate', true);
 
         if ($cont == 0) {
