@@ -23,13 +23,16 @@ class CreateEventoController extends Controller
             'nomeEvento' => 'required|string|max:255',
             'dataHora' => 'required|date_format:Y-m-d\TH:i',
             'categoria' => 'required|string|max:50',
-
         ]);
 
         // Extrai os dados validados
         $nomeEvento = $validatedData['nomeEvento'];
         $dataHora = $validatedData['dataHora'];
         $categoria = $validatedData['categoria'];
+
+        $preco = ($request->preco);
+        $preco = str_replace(['R$', ','], ['', '.'], $preco);
+        $preco = number_format((float)$preco, 2, '.', '');
 
         // Convertendo a data/hora para o formato Y-m-d H:i:s
         $dataHoraFormatada = date('Y-m-d H:i:s', strtotime($dataHora));
@@ -39,6 +42,7 @@ class CreateEventoController extends Controller
             'nome' => $nomeEvento,
             'data' => $dataHoraFormatada,
             'categoria' => $categoria,
+            'valor' => $preco,
         ]);
 
         // Redireciona para a página inicial com uma mensagem de sucesso
