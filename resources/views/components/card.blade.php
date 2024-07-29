@@ -2,20 +2,25 @@
    <div>
         <h1 class="titleCard"><span>PROXIMAS</span> RESENHAS</h1>
     </div>
-    <div class="flex-card"> {{ $nome }}
-    @foreach ($cards as $card)
+    <div class="flex-card"> 
+    @foreach ($eventos as $evento)
         <div class="card">
             <div class="div-img-card">
-                <img src="{{$card->imgURL}}"
+                <img src="{{$evento->imgURL}}"
                     alt="">
             </div>
             <div class="descricao-card">
                
-                <p>{{$card->data}}</p>
-                <h2>{{$card->titulo}}</h2>
+                <p>Daqui ...</p>
+                <h2>{{$evento->nome}}</h2>
             </div>
         </div>
-    @endforeach 
+    @endforeach
+    <!-- Se $eventos for do tipo LengthAwarePaginator gera a paginação, contudo se for do tipo Collection não gera, pois o objeto Collection não possui o método links  -->
+    @if (get_class($eventos) == 'Illuminate\Pagination\LengthAwarePaginator')
+        {{$eventos->links()}}
+    @endif
+    <!-- dd(variavel) -> Exibe o conteúdo do objeto na view -> semelhante ao var_dump() -->
     </div>
     <div class="div-refresh">
         <img src="{{ asset('assets/refresh.png') }}">

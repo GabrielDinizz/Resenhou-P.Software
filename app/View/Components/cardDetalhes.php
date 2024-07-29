@@ -5,15 +5,18 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
+use App\Models\Evento;
 
-class login-card extends Component
+class cardDetalhes extends Component
 {
+    public $eventos;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($eventos)
     {
-        //
+        $this->eventos = $eventos;
     }
 
     /**
@@ -21,6 +24,8 @@ class login-card extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.login-card');
+        return view('components.card-detalhes', [
+            'eventos' => $this->eventos ?? []
+        ]);
     }
 }
