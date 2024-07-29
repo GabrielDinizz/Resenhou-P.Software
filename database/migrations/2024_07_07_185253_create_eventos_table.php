@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome')->nullable(true);
             $table->string('local')->nullable(true);
-            $table->timestamp('data')->nullable(true);
+            $table->timestamp('data');
             $table->decimal('valor', 8, 2)->nullable(true); // Assumindo que 'valor' é um valor monetário
             $table->text('descricao')->nullable(true);
             $table->string('categoria')->nullable(true);

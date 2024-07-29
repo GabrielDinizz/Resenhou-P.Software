@@ -10,10 +10,10 @@
                 </div>
                 <div class="descricao-cardList">
                     <div class="data-cardList">
-                        <p>{{ date('D', $evento->data) }}</p> <!-- Dia da semana -->
-                        <h3>{{ date('d', $evento->data) }}</h3> <!-- Dia do mês -->
-                        <p>{{ date('M', $evento->data) }}</p> <!-- Mês -->
-                        <h4>{{ date('H:i', $evento->data) }}</h4> <!-- Hora -->
+                        <p>{{ date('D', strtotime($evento->data)) }}</p> <!-- Dia da semana -->
+                        <h3>{{ date('d', strtotime($evento->data)) }}</h3> <!-- Dia do mês -->
+                        <p>{{ date('M', strtotime($evento->data)) }}</p> <!-- Mês -->
+                        <h4>{{ date('H:i', strtotime($evento->data)) }}</h4> <!-- Hora -->
                     </div>
                     <div class="text-cardList">
                         <div class="title-cardList">

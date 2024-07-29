@@ -9,7 +9,7 @@
                 <p>Pagina Inicial</p>
             </div>
         </a>
-        <a href="{{ route('create-evento') }}" class="link">
+        <a href="{{ route('eventos.create') }}" class="link">
             <div><img src="{{ asset('assets/criarEvento.svg') }}" alt="">
                 <p>Criar Evento</p>
             </div>

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'imgURL' => 'https://folhadecuritiba.com.br/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-04-at-11.05.54-jpeg.webp',
             'local' => 'SP - Teatro Positivo',
             'valor' => 55.55,
-            'data' => strtotime('2025-08-20 21:00'), // Armazenando a data completa
+            'data' => '2025-08-20 21:00', // Armazenando a data completa
         ]);
 
         Evento::create([
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'imgURL' => 'https://www.designi.com.br/images/preview/10312743.jpg',
             'local' => 'BH - Serra',
             'valor' => 30.95,
-            'data' => strtotime('2024-12-12 23:30'), // Armazenando a data completa
+            'data' => '2024-12-12 23:30', // Armazenando a data completa
         ]);   
 
         Evento::create([
@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
             'imgURL' => 'https://d2aflxsgc0z59a.cloudfront.net/events/2343bf95-8314-475c-9b01-65827becffb4_banner.jpeg', 
             'local' => 'BH - Beira Linha',
             'valor' => 27.00,
-            'data' => strtotime('2025-07-5 20:00'), 
+            'data' => '2025-07-5 20:00', 
         ]);
 
         Evento::create([
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'imgURL' => 'https://s3.guicheweb.com.br/imagenseventos/23-05-2023_09-35-15.jpg',
             'local' => 'BH - Mineirão',
             'valor' => 120.00,
-            'data' => strtotime('2025-09-29 23:00'), 
+            'data' => '2025-09-29 23:00', 
             
         ]);
 
@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
             'imgURL' => 'https://s3.guicheweb.com.br/imagenseventos/04-09-2023_09-38-08.jpg',
             'local' => 'Santa Luzia - MegaSpace ',
             'valor' => 70.00,
-            'data' => strtotime('2025-10-17 11:00'), 
+            'data' => '2025-10-17 11:00', 
         ]);
 
         //Login 
