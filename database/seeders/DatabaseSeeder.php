@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             'local' => 'BH - Serra',
             'valor' => 30.95,
             'data' => '2024-12-12 23:30', // Armazenando a data completa
+            'categoria' => 'funk', 
         ]);   
 
         Evento::create([
@@ -38,7 +39,8 @@ class DatabaseSeeder extends Seeder
             'imgURL' => 'https://d2aflxsgc0z59a.cloudfront.net/events/2343bf95-8314-475c-9b01-65827becffb4_banner.jpeg', 
             'local' => 'BH - Beira Linha',
             'valor' => 27.00,
-            'data' => '2025-07-5 20:00', 
+            'data' => '2025-07-5 20:00',
+            'categoria' => 'pagode', 
         ]);
 
         Evento::create([
@@ -47,6 +49,7 @@ class DatabaseSeeder extends Seeder
             'local' => 'BH - Mineirão',
             'valor' => 120.00,
             'data' => '2025-09-29 23:00', 
+            'categoria' => 'sertanejo', 
             
         ]);
 
@@ -56,6 +59,7 @@ class DatabaseSeeder extends Seeder
             'local' => 'Santa Luzia - MegaSpace ',
             'valor' => 70.00,
             'data' => '2025-10-17 11:00', 
+            'categoria' => 'pagode', 
         ]);
 
         //Login 

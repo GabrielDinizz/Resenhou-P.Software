@@ -16,7 +16,10 @@ Route::get('/eventos/create', [CreateEventoController::class, 'create'])->name('
 Route::post('/eventos/store', [CreateEventoController::class, 'store'])->name('eventos.store');
 
 
-Route::get('/list-eventos', [ListEventosController::class, 'index'])->name('list-eventos');
+
+Route::get('/eventos', [ListEventosController::class, 'listar'])->name('list-eventos');
+Route::get('/eventos/categoria', [ListEventosController::class, 'listar'])->name('eventos.categoria');
+
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/authenticate', [LoginController::class, 'authenticate']);

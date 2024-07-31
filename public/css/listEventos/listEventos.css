@@ -94,3 +94,68 @@
 .localizacaoEvent img{
     height: 1rem;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+
+.dropdown-button {
+    background-color: transparent; 
+    border: 1px solid white; 
+    color: white; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent; 
+    border: 1px solid white;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none; 
+    display: block; 
+     
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#eventsdisp{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-top: 30px;
+}
+#titleevents{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    
+}
+#textevents{
+    font-family: 'Days One';
+    color: #ffff;
+    font-size: 3rem;
+    font-weight: 400;
+}
