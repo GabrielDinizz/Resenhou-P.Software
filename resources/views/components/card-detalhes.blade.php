@@ -8,32 +8,34 @@
                 <div class="img-cardList">
                     <img src="{{$evento->imgURL}}" alt="">
                 </div>
-                <div class="descricao-cardList">
-                    <div class="data-cardList">
-                        <p>{{ date('D', strtotime($evento->data)) }}</p>
-                        <h3>{{ date('d', strtotime($evento->data)) }}</h3>
-                        <p>{{ date('M', strtotime($evento->data)) }}</p>
-                        <h4>{{ date('H:i', strtotime($evento->data)) }}</h4>
-                    </div>
-                    <div class="text-cardList">
-                        <div class="title-cardList">
-                            <h2>{{ $evento->nome }}</h2>
-                            <div class="localizacaoEvent">
-                                <img src="{{ asset('assets/localizacao-icon.svg') }}">
-                                <p>{{ $evento->local }}</p>
+                <div class="container-descricao">
+                    <div class="descricao-cardList">
+                        <div class="data-cardList">
+                            <p>{{ date('D', strtotime($evento->data)) }}</p>
+                            <h3>{{ date('d', strtotime($evento->data)) }}</h3>
+                            <p>{{ date('M', strtotime($evento->data)) }}</p>
+                            <h4>{{ date('H:i', strtotime($evento->data)) }}</h4>
+                        </div>
+                        <div class="text-cardList">
+                            <div class="title-cardList">
+                                <h2>{{ $evento->nome }}</h2>
+                                <div class="localizacaoEvent">
+                                    <img src="{{ asset('assets/localizacao-icon.svg') }}">
+                                    <p>{{ $evento->local }}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="preco-cardList">
-                            <div>
-                                ${{ number_format($evento->valor, 2, ',', '.') }}
-                            </div>
-
+                    </div>
+                    <div class="preco-cardList">
+                        <div>
+                            <button type="button" class="button-detalhes" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $evento->id }}">
+                                Detalhes
+                            </button>
+                            <!--${{ number_format($evento->valor, 2, ',', '.') }}-->
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ $evento->id }}">
-                    Launch static backdrop modal
-                </button>
+
             </div>
 
             <!-- Modal -->
