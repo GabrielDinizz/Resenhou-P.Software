@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\CreateEvento;
 use App\Http\Controllers\CreateEventoController;
 use App\Http\Controllers\ListEventosController;
 use Illuminate\Support\Facades\Route;
@@ -13,8 +12,14 @@ Route::post('/sac', [SacController::class, 'store'])->name('sac.store');
 
 Route::get('/', [TelaPrincipalController::class, 'index'])->name('pagina-inicial');
 
-Route::get('/create-evento', [CreateEventoController::class, 'index'])->name('create-evento');
-Route::get('/list-eventos', [ListEventosController::class, 'index'])->name('list-eventos');
+Route::get('/eventos/create', [CreateEventoController::class, 'create'])->name('eventos.create');
+Route::post('/eventos/store', [CreateEventoController::class, 'store'])->name('eventos.store');
+
+
+
+Route::get('/eventos', [ListEventosController::class, 'listar'])->name('list-eventos');
+Route::get('/eventos/categoria', [ListEventosController::class, 'listar'])->name('eventos.categoria');
+
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
