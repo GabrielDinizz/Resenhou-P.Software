@@ -67,3 +67,62 @@ h1 span {
     justify-content: center;
     margin: 2rem 0;
 }
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+    font-style: italic;
+    font-weight: 10px;
+    font-size: 20px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 330px; /* 3 itens de 100px cada + margem */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100px; /* largura do item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #d3d3d3; /* cor do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: white;
+    font-family: "Orbitron", sans-serif; /* fonte usada */
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+button:focus {
+    outline: none;
+}

@@ -25,4 +25,67 @@
     <div class="div-refresh">
         <img src="{{ asset('assets/refresh.png') }}">
     </div>
+    <div class="carousel">
+    <button class="prev">&#9664;</button>
+    <div class="carousel-track-container">
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <div class="circle"></div>
+                <p>Funk</p>
+            </div>
+            <div class="carousel-item">
+                <div class="circle"></div>
+                <p>Rap</p>
+            </div>
+            <div class="carousel-item">
+                <div class="circle"></div>
+                <p>Pagode</p>
+            </div>
+            <div class="carousel-item">
+                <div class="circle"></div>
+                <p>Kpop</p>
+            </div>
+            <div class="carousel-item">
+                <div class="circle"></div>
+                <p>Pop</p>
+            </div>
+            <div class="carousel-item">
+                <div class="circle"></div>
+                <p>Rock</p>
+            </div>
+        </div>
+    </div>
+    <button class="next">&#9654;</button>
+</div>
+
+<script>const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let currentIndex = 0;
+const itemsPerPage = 3;
+
+function updateCarousel() {
+    const offset = -currentIndex * (items[0].offsetWidth + 10); // ajuste para a margem
+    track.style.transform = `translateX(${offset}px)`;
+}
+
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex -= 1; // Muda para apenas 1 item por clique
+    }
+    updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+    if (currentIndex < items.length - itemsPerPage) {
+        currentIndex += 1; // Muda para apenas 1 item por clique
+    }
+    updateCarousel();
+});
+
+
+</script>
 </section>
+
