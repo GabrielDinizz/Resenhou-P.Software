@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{ asset('css/listEventos/listEventos.css') }}">
   <link rel="stylesheet" href="{{ asset('css/componentsCSS/paginacao.css') }}">
   <link rel="stylesheet" href="{{ asset('css/telaPrincipal/rodapeSection.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentsCSS/modalDetalhes.css') }}">
 
 </head>
 
