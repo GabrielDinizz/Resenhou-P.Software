@@ -33,7 +33,18 @@
     color: #F7317D;
 }
 
+.modal-descricao {
+    padding: 0 1rem;
+}
 
+.modal-descricao h3{
+    color: #ffff;
+    font-family: 'Days One';
+}
+
+.modal-descricao h3 span{
+    color: #F7317D;
+}
 
 .modal-footer {
     border: none;
