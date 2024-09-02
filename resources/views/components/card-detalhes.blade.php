@@ -45,11 +45,19 @@
                         <div class="modal-img">
                             <img src={{ $evento->imgURL }} alt="">
                         </div>
+                        <div class="modal-nomeEvento">
+                            <h3>{{$evento->nome}}</h3>
+                        </div>
                         <div class="modal-body">
-                            <p><strong>Date:</strong> {{ date('D, d M Y H:i', strtotime($evento->data)) }}</p>
-                            <p><strong>Location:</strong> {{ $evento->local }}</p>
-                            <p><strong>Description:</strong> {{ $evento->descricao }}</p>
-                            <p><strong>Price:</strong> ${{ number_format($evento->valor, 2, ',', '.') }}</p>
+                            <h3>DETALHES DO <span>EVENTO</span></h3>
+                            <p><strong>Data:</strong> {{ date('D, d M Y H:i', strtotime($evento->data)) }}</p>
+                            <p><strong>Localização:</strong> {{ $evento->local }}</p>
+                            <p><strong>Categoria:</strong> {{ $evento->categoria }}</p>
+                            <p><strong>Preço:</strong> ${{ number_format($evento->valor, 2, ',', '.') }}</p>
+                        </div>
+                        <div class="modal-descricao">
+                            <h3>DESCRIÇÃO DO EVENTO</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima expedita earum illum, magnam placeat debitis recusandae. Nemo, sunt. Ullam praesentium temporibus similique soluta aut aspernatur cupiditate pariatur dignissimos reprehenderit hic.</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

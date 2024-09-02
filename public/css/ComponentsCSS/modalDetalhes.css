@@ -1,3 +1,40 @@
+
+
 .modal-img img{
     width: 100%;
+}
+
+.modal-content {
+    background-color: #2d2d2d;
+    color: #ffff;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.modal-nomeEvento h3 {
+    font-family: 'Days One';
+    color: #ffff;
+    width: 100%;
+    background-color: #F7317D;
+    text-align: center;
+}
+
+.modal-body p{
+    font-size: 1.2rem;
+    padding: .4rem 0;
+}
+
+.modal-body h3{
+    color: #ffff;
+    font-family: 'Days One';
+}
+
+.modal-body h3 span{
+    color: #F7317D;
+}
+
+
+
+.modal-footer {
+    border: none;
 }
