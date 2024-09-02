@@ -42,9 +42,8 @@
             <div class="modal fade" id="staticBackdrop{{ $evento->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel{{ $evento->id }}" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel{{ $evento->id }}">{{ $evento->nome }}</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-img">
+                            <img src={{ $evento->imgURL }} alt="">
                         </div>
                         <div class="modal-body">
                             <p><strong>Date:</strong> {{ date('D, d M Y H:i', strtotime($evento->data)) }}</p>
