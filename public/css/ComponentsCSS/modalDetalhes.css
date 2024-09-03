@@ -49,3 +49,9 @@
 .modal-footer {
     border: none;
 }
+
+.btn-secondary {
+    background-color: #F7317D;
+    border: none;
+    margin-top: 1rem;
+}

@@ -1,7 +1,6 @@
 <header>
     <div>
         <img src="{{ asset('assets/logoResenhou.png') }}" alt="">
-        <input type="text">
     </div>
     <nav>
         <a href="{{ route('pagina-inicial') }}">
@@ -35,7 +34,7 @@
                 <a href="{{ route('login') }}"><button>LOGIN</button></a>
             </div>
             <div>
-                <p>Criar Conta</p>
+                <a href="{{ route('createAccount') }}"><p>Criar Conta</p></a>
             </div>
         @endif
     </nav>

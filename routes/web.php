@@ -18,6 +18,8 @@ Route::post('/eventos/store', [CreateEventoController::class, 'store'])->name('e
 Route::get('/eventos', [ListEventosController::class, 'listar'])->name('list-eventos');
 Route::get('/eventos/categoria', [ListEventosController::class, 'listar'])->name('eventos.categoria');
 
+
+Route::get('/CreateAccount', [LoginController::class, 'create'])->name('createAccount');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

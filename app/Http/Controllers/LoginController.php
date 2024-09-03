@@ -12,6 +12,10 @@ class LoginController extends Controller
         return view('layouts.Login');
     }
 
+    public function create() {
+        return view('layouts.CreateAccount');
+    }
+
     public function authenticate(Request $req) {
         $credentials = array(
             'email' => $req->email,

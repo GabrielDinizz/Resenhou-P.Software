@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+.containerLogin {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Days One', sans-serif;
+    caret-color: transparent; 
+    margin: 6rem 0;
+}
+
+.title {
+    font-family: 'Days One', sans-serif; 
+    font-size: xxx-large;
+    font-weight: 300;
+}
+.titulo2{
+    font-family: 'Days One', sans-serif;
+    color: #fff;
+    font-size: x-large;
+    font-weight: 300;
+}
+
+.login {
+    width: 100%;
+    max-width: 550px;
+}
+
+.login h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.caixa1 {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.caixa1 input {
+    width: calc(100% - 40px); 
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    padding-left: 10px;
+    caret-color: black; 
+}
+
+.caixa1 label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 16px;
+}
+
+.caixa1 input:focus ~ label,
+.caixa1 input:valid ~ label {
+    top: -20px;
+    left: 10px;
+    color: #732ec2;
+    font-size: 12px;
+}
+
+.trocasenha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px; 
+    height: 24px;
+}
+
+.esquecisenha {
+    color: rgba(45, 45, 47, 1);
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-family: 'Days One', sans-serif;
+    width: 220px;
+}
+
+.esquecisenha:hover {
+    color: #732ec2;
+}
+
+#buttonLogar {
+    background: #F7317D;
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 100%;
+    font-size: 25px;
+    transition: 0.5s;
+    display: block; /* Adiciona display block */
+    margin: 0 auto; /* Centraliza o botão */
+     font-family: 'Days One', sans-serif;
+}
+
+button:hover {
+    background: #732ec2;
+}
+
+p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+p a {
+    color: #F7317D;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #732ec2;
+}
+input{
+    background-color: #fff;
+}
+div.caixa1{
+    border-radius: 100px;
+    border: .3rem solid #ffff;
+}
+
+#cadastre {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
