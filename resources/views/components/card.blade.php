@@ -52,20 +52,20 @@
             <div class="carousel-item" data-category="kpop">
                 <a href="{{ route('list-eventos', ['categoria' => 'kpop']) }}">
                     <div class="circle"><img src="https://img.freepik.com/vetores-premium/banner-de-icones-do-kpop_620118-5.jpg?w=826" alt="">
-</div>
+            </div>
 
                 </a>
                 <p>Kpop</p>
             </div>
             <div class="carousel-item" data-category="pop">
                 <a href="{{ route('list-eventos', ['categoria' => 'pop']) }}">
-                    <div class="circle"></div>
+                    <div class="circle"><img src="https://thebigquiz.net/uploads/2020/12/4fd88a1d8592d58641.jpg" alt=""></div>
                 </a>
                 <p>Pop</p>
             </div>
             <div class="carousel-item" data-category="rock">
                 <a href="{{ route('list-eventos', ['categoria' => 'rock']) }}">
-                    <div class="circle"></div>
+                    <div class="circle"><img src="https://images7.alphacoders.com/436/436860.jpg" alt=""></div>
                 </a>
                 <p>Rock</p>
             </div>
