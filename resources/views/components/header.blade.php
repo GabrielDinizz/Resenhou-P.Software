@@ -30,7 +30,7 @@
                 <a href="{{ route('login') }}"><button>LOGIN</button></a>
             </div>
             <div>
-                <p>Criar Conta</p>
+                <a href="{{ route('createAccount')}}"><p>Criar Conta</p></a>
             </div>
         @endif
     </nav>
