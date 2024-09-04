@@ -11,7 +11,7 @@ class ListEventosController extends Controller
     public function listar(Request $request)
     {
         $categoria = $request->input('categoria');
-        $cont = $request->input('cont', 2); // Número de itens por página
+        $cont = $request->input('cont', 6); // Número de itens por página
 
         if ($categoria) {
             $eventos = Evento::where('categoria', $categoria)->paginate($cont);
@@ -30,11 +30,11 @@ class ListEventosController extends Controller
 
     public function index(Request $request)
     {
-        $cont = $request->input('cont', 2);
+        $cont = $request->input('cont', 6);
         $isPaginate = $request->input('isPaginate', true);
 
         if ($cont == 0) {
-            $eventos = Evento::paginate(2);
+            $eventos = Evento::paginate(6);
         } else {
             if ($isPaginate) {
                 $eventos = Evento::paginate($cont);

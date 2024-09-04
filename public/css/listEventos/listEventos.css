@@ -6,14 +6,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4rem;
-    margin-top: 8rem;
+    margin: 8rem 0;
+}
+
+.card-listEventos {
+    border-radius: 30px 30px;
+    background-color: #9A2DCB;
 }
 
 .img-cardList {
     width: 100%;
     height: 15rem;
     overflow: hidden;
-    border-radius: .5rem;
+    border-radius: 30px 30px 0 0;
 }
 
 .img-cardList img {
@@ -25,12 +30,8 @@
 .descricao-cardList {
     display: flex;
     gap: 1rem;
-    padding: 1.5rem 1rem 1rem 1rem;
-    background-color: #9A2DCB;
-    position: relative;
-    top: -1rem;
-    z-index: -1;
     border-radius: 0 0rem .5rem .5rem;
+    color: #ffff;
 }
 
 .text-cardList {
@@ -48,12 +49,10 @@
     display: flex;
     justify-content: end;
     gap: 2%;
+    width: 100%;
 }
 
 .preco-cardList div {
-    background-color: #F7317D;
-    padding: .5rem;
-    border-radius: 50px;
     font-weight: 200;
 }
 
@@ -67,13 +66,11 @@
 
 .data-cardList p{
     font-family: 'Roboto';
-    color: white;
 
 }
 
 .data-cardList h3{
     font-family: 'Roboto';
-    color: white;
     font-size: 2rem;
 }
 
@@ -158,4 +155,28 @@
     color: #ffff;
     font-size: 3rem;
     font-weight: 400;
+}
+
+/* custom.css */
+.btn-primary {
+    background-color: #4CAF50; /* Altere a cor de fundo */
+    border-color: #388E3C; /* Altere a cor da borda */
+    color: white; /* Altere a cor do texto */
+}
+
+.btn-primary:hover {
+    background-color: #45A049; /* Cor de fundo ao passar o mouse */
+    border-color: #2C6D34; /* Cor da borda ao passar o mouse */
+}
+
+.button-detalhes {
+    background-color: #F7317D;
+    border: none;
+    color: #ffff;
+    padding: .4rem 1rem;
+    border-radius: 30px;
+}
+
+.container-descricao {
+    padding: 1rem;
 }

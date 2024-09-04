@@ -15,11 +15,8 @@ Route::get('/', [TelaPrincipalController::class, 'index'])->name('pagina-inicial
 Route::get('/eventos/create', [CreateEventoController::class, 'create'])->name('eventos.create');
 Route::post('/eventos/store', [CreateEventoController::class, 'store'])->name('eventos.store');
 
-
-
 Route::get('/eventos', [ListEventosController::class, 'listar'])->name('list-eventos');
 Route::get('/eventos/categoria', [ListEventosController::class, 'listar'])->name('eventos.categoria');
-
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
