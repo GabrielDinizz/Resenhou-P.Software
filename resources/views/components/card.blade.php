@@ -29,28 +29,44 @@
     <button class="prev">&#9664;</button>
     <div class="carousel-track-container">
         <div class="carousel-track">
-            <div class="carousel-item">
-                <div class="circle"></div>
+            <div class="carousel-item" data-category="funk">
+                <a href="{{ route('list-eventos', ['categoria' => 'funk']) }}">
+                    <div class="circle">
+                        <img src="https://i.pinimg.com/originals/36/cc/3a/36cc3a17a43ff10593dc22bc8690f687.jpg" alt="">
+                    </div>
+                </a>
                 <p>Funk</p>
             </div>
-            <div class="carousel-item">
-                <div class="circle"></div>
+            <div class="carousel-item" data-category="rap">
+                <a href="{{ route('list-eventos', ['categoria' => 'rap']) }}">
+                    <div class="circle"><img src="https://wallpaper.dog/large/5547321.jpg" alt=""></div>
+                </a>
                 <p>Rap</p>
             </div>
-            <div class="carousel-item">
-                <div class="circle"></div>
+            <div class="carousel-item" data-category="pagode">
+                <a href="{{ route('list-eventos', ['categoria' => 'pagode']) }}">
+                    <div class="circle"><img src="https://as2.ftcdn.net/v2/jpg/02/21/24/49/1000_F_221244921_owoiSCljZt2M0hwbb6Y08SVE88OMcirG.jpg" alt=""></div>
+                </a>
                 <p>Pagode</p>
             </div>
-            <div class="carousel-item">
-                <div class="circle"></div>
+            <div class="carousel-item" data-category="kpop">
+                <a href="{{ route('list-eventos', ['categoria' => 'kpop']) }}">
+                    <div class="circle"><img src="https://img.freepik.com/vetores-premium/banner-de-icones-do-kpop_620118-5.jpg?w=826" alt="">
+            </div>
+
+                </a>
                 <p>Kpop</p>
             </div>
-            <div class="carousel-item">
-                <div class="circle"></div>
+            <div class="carousel-item" data-category="pop">
+                <a href="{{ route('list-eventos', ['categoria' => 'pop']) }}">
+                    <div class="circle"><img src="https://thebigquiz.net/uploads/2020/12/4fd88a1d8592d58641.jpg" alt=""></div>
+                </a>
                 <p>Pop</p>
             </div>
-            <div class="carousel-item">
-                <div class="circle"></div>
+            <div class="carousel-item" data-category="rock">
+                <a href="{{ route('list-eventos', ['categoria' => 'rock']) }}">
+                    <div class="circle"><img src="https://images7.alphacoders.com/436/436860.jpg" alt=""></div>
+                </a>
                 <p>Rock</p>
             </div>
         </div>
@@ -58,7 +74,9 @@
     <button class="next">&#9654;</button>
 </div>
 
-<script>const track = document.querySelector('.carousel-track');
+
+<script>
+const track = document.querySelector('.carousel-track');
 const items = document.querySelectorAll('.carousel-item');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -83,6 +101,19 @@ nextButton.addEventListener('click', () => {
         currentIndex += 1; // Muda para apenas 1 item por clique
     }
     updateCarousel();
+});
+const carouselItems = document.querySelectorAll('.carousel-item');
+
+carouselItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const category = item.getAttribute('data-category');
+
+        // Cria a URL usando a rota do Laravel
+        const redirectUrl = `{{ route('list-eventos', ['categoria' => '']) }}/${category}`;
+
+        // Redireciona o usuário para a URL gerada
+        window.location.href = redirectUrl;
+    });
 });
 
 

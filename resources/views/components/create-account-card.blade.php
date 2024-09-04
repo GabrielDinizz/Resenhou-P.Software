@@ -8,7 +8,7 @@
         @endif  
         <form method="POST" action="/authenticate">
             @csrf
-            <h1 class="titulo2">Nome de usuário</h1>
+            <h1 class="titulo2">Nome de Usuário</h1>
             <div class="caixa1">
                 <input type="text" name="email" value="{{ old('email') }}">
             </div>
