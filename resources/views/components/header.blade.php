@@ -1,6 +1,7 @@
 <header>
     <div>
         <img src="{{ asset('assets/logoResenhou.png') }}" alt="">
+        <input type="text">
     </div>
     <nav>
         <a href="{{ route('pagina-inicial') }}">
@@ -20,21 +21,16 @@
         </a>
         @if (Auth::check())
             <div>
-                <img id="imglogin" src="{{ asset('assets/img_login.png') }}" alt="">
-                ㅤ
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <button>LOGOUT</button>
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+       <p><a href="{{ route('perfil') }}"><img id="imglogin" src="{{ auth()->user()->avatar }}"></a>
+        
+               
             </div>
         @else
             <div>
                 <a href="{{ route('login') }}"><button>LOGIN</button></a>
             </div>
             <div>
-                <a href="{{ route('createAccount') }}"><p>Criar Conta</p></a>
+                <p>Criar Conta</p>
             </div>
         @endif
     </nav>
