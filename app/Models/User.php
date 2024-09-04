@@ -20,12 +20,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-<<<<<<< HEAD
         'cpf',
         'birthdate',
-=======
-        'avatar',
->>>>>>> b72dfd4063f21c1a11a6a473d94073eb08a34881
+        'avatar'
     ];
 
     /**
