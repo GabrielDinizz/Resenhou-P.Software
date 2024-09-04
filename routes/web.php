@@ -21,6 +21,7 @@ Route::get('/eventos/categoria', [ListEventosController::class, 'listar'])->name
 
 Route::get('/CreateAccount', [LoginController::class, 'create'])->name('createAccount');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/register', [LoginController::class, 'register'])->name('register'); // Rota de cadastro
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
