@@ -25,3 +25,7 @@ Route::post('/register', [LoginController::class, 'register'])->name('register')
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/perfil', [PerfilController::class, 'edit'])->name('perfil');
+Route::patch('/perfil', [PerfilController::class, 'update'])->name('perfil.update');
+Route::patch('/perfil/avatar', [PerfilController::class, 'updateAvatar'])->name('perfil.avatar.update');
+
