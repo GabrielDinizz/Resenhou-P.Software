@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.info-section, .avatar-section {
+    width: 48%;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.info-section form div, .avatar-section form div {
+    margin-bottom: 1.5rem;
+}
+
+.info-section label, .avatar-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.info-section input, .avatar-section input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.avatar-preview img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.buttonsperfil {
+    background-color: #F7317D;
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 70%;
+    font-size: 25px;
+    transition: 0.5s;
+    display: block; /* Adiciona display block */
+    margin: 0 auto; /* Centraliza o botão */
+     font-family: 'Days One', sans-serif;
+}
+
+.buttonsperfil:hover {
+    background: #732ec2;
+}
+#titlei {
+    color: white;
+    font-family: 'Days One', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.label-style {
+    font-family: 'Days One', sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    
+}
+#titlep{
+    font-size: 2.5rem;
+  color: #732ec2;
+}
+.formstit{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Days One', sans-serif;
+    color: #732ec2;
+    font-size: 2rem;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+
+
+
+.select-style {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+#avatar{
+    width: 20%;
+   border-radius: 5px;
+   margin: 20px auto;
+   font-family: 'Days One', sans-serif;
+   font-size: 0.8rem;
+   color: #F7317D;
+
+}
+ 
+  
+  .avatar-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  
+  .avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+ 
+  
