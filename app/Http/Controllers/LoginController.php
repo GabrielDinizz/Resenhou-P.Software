@@ -22,15 +22,19 @@ class LoginController extends Controller
         $req->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'cpf' => 'required|string|max:14|unique:users', // Validação para CPF
+            'birthdate' => 'required|date', // Validação para Data de Nascimento
             'password' => 'required|string|min:8|confirmed',
         ]);
-
+    
         User::create([
             'name' => $req->name,
             'email' => $req->email,
+            'cpf' => $req->cpf,
+            'birthdate' => $req->birthdate,
             'password' => Hash::make($req->password),
         ]);
-
+    
         return redirect('/login')->with('success', 'Conta criada com sucesso! Faça login para continuar.');
     }
 

@@ -2,11 +2,11 @@
     <div class="login">
         <h2 class="title">CADASTRAR</h2>
         @if($errors->any())
-            @foreach($errors->all() as $e)
-                <p>{{ $e }}</p>
-            @endforeach
-        @endif  
-        <form method="POST" action="/register"> <!-- Mude a rota de action -->
+        @foreach($errors->all() as $e)
+        <p>{{ $e }}</p>
+        @endforeach
+        @endif
+        <form method="POST" action="{{ route('register') }}">
             @csrf
             <h1 class="titulo2">Nome de Usuário</h1>
             <div class="caixa1">

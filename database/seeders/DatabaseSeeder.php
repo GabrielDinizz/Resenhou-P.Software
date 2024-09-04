@@ -111,12 +111,5 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        //Login 
-        //?o que é esse Hash?
-        User::factory()->create([
-            'name' => 'Papaleguas',
-            'email' => 'acme@acme.com',
-            'password' => Hash::make('123456')
-        ]);
     }
 }
