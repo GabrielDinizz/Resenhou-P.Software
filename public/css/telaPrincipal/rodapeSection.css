@@ -6,8 +6,7 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-    border-radius: 191px 191px 0 0;
-    background-image: linear-gradient(to bottom, #9a2ecb, #a742d8, #b454e4, #c165f1, #ce76fe);
+    border-radius: 100px 100px 0 0;
 }
 
 .footer-container {
@@ -73,25 +72,51 @@ footer {
 .categoriastitulo {
     font-size: 30px;
     font-family: "Days One", sans-serif;
-
+    font-weight: 400;
 }
 
 #textform {
     font-size: 30px;
     font-family: "Days One", sans-serif;
+    font-weight: 400;
 }
 
-#txtinputformsac {
-    font-size: 16px;
+form label {
     font-family: "Days One", sans-serif;
+    font-weight: 300;
+    
 }
 
-#txtareaformsac {
+#nome {
+    padding: 5px 0;
+    background: transparent;
+    border: #ffff 1px solid;
+    border-radius: 10px;
+    outline: none;
     font-size: 16px;
-    font-family: "Days One", sans-serif;
+    padding-left: 10px;
+    caret-color: #ffff;
+    color: #ffff;
+    margin: .5rem 0;
 }
 
-#txtbuttonformsac {
+#mensagem {
+    padding: 5px 0;
+    background: transparent;
+    border: #ffff 1px solid;
+    border-radius: 10px;
+    outline: none;
     font-size: 16px;
+    padding-left: 10px;
+    caret-color: #ffff;
+    color: #ffff;
+    resize: vertical; 
+    margin: .5rem 0;
+}
+
+#btn-enviar-sac {
+    background-color: #F7317D;
     font-family: "Days One", sans-serif;
+    border-radius: 10px;
+    font-size: 1rem;
 }

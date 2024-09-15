@@ -22,9 +22,6 @@
     @endif
     <!-- dd(variavel) -> Exibe o conteúdo do objeto na view -> semelhante ao var_dump() -->
     </div>
-    <div class="div-refresh">
-        <img src="{{ asset('assets/refresh.png') }}">
-    </div>
     <div class="carousel">
     <button class="prev">&#9664;</button>
     <div class="carousel-track-container">
