@@ -9,7 +9,7 @@
                 <p>Pagina Inicial</p>
             </div>
         </a>
-        <a href="{{ route('eventos.create') }}" class="link">
+        <a href="{{ route('evento.etapa1') }}" class="link">
             <div><img src="{{ asset('assets/criarEvento.svg') }}" alt="">
                 <p>Criar Evento</p>
             </div>
@@ -20,18 +20,20 @@
             </div>
         </a>
         @if (Auth::check())
-            <div>
-       <p><a href="{{ route('perfil') }}"><img id="imglogin" src="{{ auth()->user()->avatar }}"></a>
-        
-               
-            </div>
+        <div>
+            <p><a href="{{ route('perfil') }}"><img id="imglogin" src="{{ asset(auth()->user()->avatar) }}"></a></p>
+
+
+        </div>
         @else
-            <div>
-                <a href="{{ route('login') }}"><button>LOGIN</button></a>
-            </div>
-            <div>
-                <a href="{{ route('createAccount')}}"><p>Criar Conta</p></a>
-            </div>
+        <div>
+            <a href="{{ route('login') }}"><button>LOGIN</button></a>
+        </div>
+        <div>
+            <a href="{{ route('createAccount')}}">
+                <p>Criar Conta</p>
+            </a>
+        </div>
         @endif
     </nav>
 </header>

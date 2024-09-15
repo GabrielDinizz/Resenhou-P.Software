@@ -13,8 +13,7 @@ Route::post('/sac', [SacController::class, 'store'])->name('sac.store');
 
 Route::get('/', [TelaPrincipalController::class, 'index'])->name('pagina-inicial');
 
-Route::get('/eventos/create', [CreateEventoController::class, 'create'])->name('eventos.create');
-Route::post('/eventos/store', [CreateEventoController::class, 'store'])->name('eventos.store');
+Route::get('/evento/etapa1', [CreateEventoController::class, 'etapa1'])->name('evento.etapa1');
 
 Route::get('/eventos', [ListEventosController::class, 'listar'])->name('list-eventos');
 Route::get('/eventos/categoria', [ListEventosController::class, 'listar'])->name('eventos.categoria');
