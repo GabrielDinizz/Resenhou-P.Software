@@ -112,8 +112,6 @@ carouselItems.forEach(item => {
         window.location.href = redirectUrl;
     });
 });
-
-
 </script>
 <section class="event-banner">
         <div class="event-content">
@@ -124,4 +122,7 @@ carouselItems.forEach(item => {
             <button class="create-event-btn">CRIAR EVENTO</button>
         </div>
 </section>
+
+
+
 

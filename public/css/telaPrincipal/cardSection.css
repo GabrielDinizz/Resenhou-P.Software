@@ -130,6 +130,7 @@ button:focus {
     outline: none;
 }
 
+
 .event-banner {
     display: flex;
     justify-content: space-between;
@@ -178,4 +179,3 @@ button:focus {
 .create-event-btn:hover {
     background-color: #8A24B0;
 }
-
