@@ -28,4 +28,6 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/perfil', [PerfilController::class, 'edit'])->name('perfil');
 Route::patch('/perfil', [PerfilController::class, 'update'])->name('perfil.update');
 Route::patch('/perfil/avatar', [PerfilController::class, 'updateAvatar'])->name('perfil.avatar.update');
+Route::patch('/perfil/update-name', [PerfilController::class, 'updateName'])->name('perfil.updateName');
+
 

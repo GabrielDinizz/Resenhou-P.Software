@@ -43,21 +43,34 @@ class PerfilController extends Controller
             return back()->with('error', 'Avatar inválido!');
         }
     }
+    public function updateName(Request $request)
+    {
+        $user = Auth::user();
+
+        // Validação do campo nome
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        // Atualiza o nome
+        $user->name = $request->input('name');
+        $user->save();
+
+        // Redireciona de volta com mensagem de sucesso
+        return redirect()->route('perfil')->with('success', 'Nome alterado com sucesso!');
+    }
 
     public function update(Request $request)
     {
         $user = Auth::user();
 
         // Validação dos campos
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'password' => 'required|confirmed|min:8',
+        $validated = $request->validate([
+            'name' => 'sometimes|string|max:255',
+            'password' => 'nullable|confirmed|min:8',
         ]);
 
-        // Atualiza o nome
-        $user->name = $request->input('name');
-
-        // Atualiza a senha
+        // Atualiza a senha se fornecida
         if ($request->filled('password')) {
             $user->password = Hash::make($request->input('password'));
         }
@@ -66,6 +79,6 @@ class PerfilController extends Controller
         $user->save();
 
         // Redireciona de volta com mensagem de sucesso
-        return redirect()->route('perfil')->with('success', 'Nome e senha alterados com sucesso!');
+        return redirect()->route('perfil')->with('success', 'Perfil atualizado com sucesso!');
     }
 }

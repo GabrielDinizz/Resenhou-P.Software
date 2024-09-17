@@ -9,11 +9,13 @@
                 <p>Pagina Inicial</p>
             </div>
         </a>
+        @if (Auth::check())
         <a href="{{ route('evento.etapa1') }}" class="link">
             <div><img src="{{ asset('assets/criarEvento.svg') }}" alt="">
                 <p>Criar Evento</p>
             </div>
         </a>
+        @endif
         <a href="{{ route('list-eventos') }}" class="link">
             <div><img src="{{ asset('assets/eventos.svg') }}" alt="">
                 <p>Eventos</p>
