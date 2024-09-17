@@ -7,6 +7,7 @@ footer {
     color: #fff;
     padding: 20px 0;
     border-radius: 100px 100px 0 0;
+    background-image: linear-gradient(to bottom, #9a2ecb, #a742d8, #b454e4,#c165f1, #ce76fe) ;
 }
 
 .footer-container {
