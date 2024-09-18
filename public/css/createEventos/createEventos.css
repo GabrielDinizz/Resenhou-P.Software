@@ -1,0 +1,89 @@
+.content {
+    max-width: 1024px;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.titulo-instrucoes {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.titulo-instrucoes h1{
+    font-family: "Days One";
+    color: #ffff;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.titulo-instrucoes h1 span{
+    color: #F7317D;
+}
+
+.titulo-instrucoes img{
+    height: 25px;
+}
+
+.txt-instrucoes {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    color: #ffff;
+    font-family: "Roboto";
+}
+
+.forms1etapa {
+    font-size: 1.5rem;
+    color: #ffff;
+    font-family: "Days One";
+}
+
+.forms1etapa input {
+    margin-bottom: 2rem ;
+    margin-top: .4rem ;
+    width: 100%;
+    border-radius: 40px;
+    height: 50px;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    color: black;
+    border: none;
+}
+
+.forms1etapa textarea {
+    margin-top: .4rem ;
+    margin-bottom: 2rem ;
+    width: 100%;
+    height: 100px;
+    max-height: 250px; 
+    resize: vertical;
+    border: none;
+    border-radius: 40px;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.continuar {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.continuar button {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-family: "Days One"; 
+    background-color: #F7317D;
+    color: #ffff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}

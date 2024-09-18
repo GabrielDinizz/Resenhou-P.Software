@@ -14,28 +14,34 @@
     <x-header />
 
     <div class="container">
-        <div class="instrucoes">
-            <div class="titulo-instrucoes">
-                <h1>CRIAR EVENTO</h1>
-                <img src="" alt=""> <!-- Bolinhas de progresso -->
+        <div class="content">
+            <div class="instrucoes">
+                <div class="titulo-instrucoes">
+                    <h1>CRIAR <span>EVENTO</span></h1>
+                    <img src="{{ asset('assets/etapa1.png') }}" alt=""> <!-- Bolinhas de progresso -->
+                </div>
+                <div class="txt-instrucoes">
+                    Vamos dar um nome ao seu evento! Nos diga também a data e
+                    a hora que a cidade irá parar para comparecer a essa Resenha!
+                </div>
             </div>
-            <div class="txt-instrucoes">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ea quos molestias
-                optio blanditiis a repellat doloribus tempora delectus enim? Numquam ullam aperiam iure
-                pariatur tempore alias iusto, cumque maiores!
+            <div class="forms1etapa">
+                <form action="">
+                    <p>Nome</p>
+                    <input type="text"> <br>
+
+                    <p>Data</p>
+                    <input type="text"><br>
+
+                    <p>Hora</p>
+                    <input type="text"><br>
+                </form>
             </div>
-        </div>
-        <div class="forms1etapa">
-            <form action="">
-                <label for="">Nome</label>
-                <input type="text">
-
-                <label for="">Data</label>
-                <input type="text">
-
-                <label for="">Hora</label>
-                <input type="text"> 
-            </form>
+            <div class="continuar">
+                <form action="{{ route('etapa2') }}" method="GET">
+                    <button type="submit">CONTINUAR</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>

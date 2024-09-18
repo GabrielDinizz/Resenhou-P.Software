@@ -1,7 +1,6 @@
 <header>
     <div>
         <img src="{{ asset('assets/logoResenhou.png') }}" alt="">
-        <input type="text">
     </div>
     <nav>
         <a href="{{ route('pagina-inicial') }}">

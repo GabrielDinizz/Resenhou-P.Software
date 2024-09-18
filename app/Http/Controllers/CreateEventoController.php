@@ -11,4 +11,8 @@ class CreateEventoController extends Controller
     public function Etapa1() {
         return view('layouts.CreateEventos.etapa1');
     }
+
+    public function Etapa2() {
+        return view('layouts.CreateEventos.etapa2');
+    }
 }

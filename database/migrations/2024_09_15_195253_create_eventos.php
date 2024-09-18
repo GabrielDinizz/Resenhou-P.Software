@@ -14,12 +14,19 @@ return new class extends Migration
         Schema::create('eventos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->timestamp('data_inicio');
-            $table->timestamp('data_termino');
-            $table->timestamps();
+            $table->string('local');
+            $table->timestamp('data');
+            $table->decimal('valor', 8, 2);
+            $table->text('descricao')->nullable();
+            $table->string('categoria');
+            $table->string('imgURL')->nullable();
+            $table->timestamps(); // Se você quiser habilitar timestamps automáticos, pode remover "$timestamps = false" do modelo.
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down()
     {
         Schema::dropIfExists('eventos');
