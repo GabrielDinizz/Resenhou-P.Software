@@ -15,7 +15,27 @@
 
     <div class="container">
         <div class="instrucoes">
+            <div class="titulo-instrucoes">
+                <h1>CRIAR EVENTO</h1>
+                <img src="" alt=""> <!-- Bolinhas de progresso -->
+            </div>
+            <div class="txt-instrucoes">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ea quos molestias
+                optio blanditiis a repellat doloribus tempora delectus enim? Numquam ullam aperiam iure
+                pariatur tempore alias iusto, cumque maiores!
+            </div>
+        </div>
+        <div class="forms1etapa">
+            <form action="">
+                <label for="">Nome</label>
+                <input type="text">
 
+                <label for="">Data</label>
+                <input type="text">
+
+                <label for="">Hora</label>
+                <input type="text"> 
+            </form>
         </div>
     </div>
 </body>
