@@ -10,11 +10,11 @@ class ListEventosController extends Controller
 {
     public function listar(Request $request)
     {
-        $categoria = $request->input('categoria');
+        $categoria = $request->input('evento_categoria');
         $cont = $request->input('cont', 6); // Número de itens por página
 
         if ($categoria) {
-            $eventos = Evento::where('categoria', $categoria)->paginate($cont);
+            $eventos = Evento::where('evento_categoria', $categoria)->paginate($cont);
         } else {
             $eventos = Evento::paginate($cont);
         }

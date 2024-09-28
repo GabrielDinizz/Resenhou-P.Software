@@ -28,11 +28,11 @@
         <button class="dropdown-button">Eventos</button>
         <div class="dropdown-content" id="dropdown">
           <a href="{{ route('list-eventos') }}">Todos</a>
-          <a href="{{ route('list-eventos', ['categoria' => 'sertanejo']) }}">Sertanejo</a>
-          <a href="{{ route('list-eventos', ['categoria' => 'eletronica']) }}">Eletronica</a>
-          <a href="{{ route('list-eventos', ['categoria' => 'baile']) }}">Baile</a>
-          <a href="{{ route('list-eventos', ['categoria' => 'pagode']) }}">Pagode</a>
-          <a href="{{ route('list-eventos', ['categoria' => 'funk']) }}">Funk</a>
+          <a href="{{ route('list-eventos', ['evento_categoria' => 'sertanejo']) }}">Sertanejo</a>
+          <a href="{{ route('list-eventos', ['evento_categoria' => 'eletronica']) }}">Eletronica</a>
+          <a href="{{ route('list-eventos', ['evento_categoria' => 'baile']) }}">Baile</a>
+          <a href="{{ route('list-eventos', ['evento_categoria' => 'pagode']) }}">Pagode</a>
+          <a href="{{ route('list-eventos', ['evento_categoria' => 'funk']) }}">Funk</a>
         </div>
       </div>
     </div>

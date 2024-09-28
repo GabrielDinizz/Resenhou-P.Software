@@ -11,24 +11,23 @@
     <link rel="stylesheet" href="{{ asset('css/componentsCSS/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    
+
 </head>
 
 <body>
-        <!-- Como posso fazer uma regra de negocio na qual fique simples adicionar os 'modulos' da pagina -->
-        <x-homepage />
-        
+    <!-- Como posso fazer uma regra de negocio na qual fique simples adicionar os 'modulos' da pagina -->
+    <x-homepage />
+
     <main>
-        <x-carousel />
         <!-- O que eu coloco no component diretamente é um atributo -->
-        <x-card cont="3"/>
+        <x-card cont="3" />
     </main>
 
 
-<x-footer />
+    <x-footer />
 
 
- 
+
 
 </body>
 

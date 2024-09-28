@@ -17,6 +17,7 @@
         <div class="content">
             <div class="instrucoes">
                 <div class="titulo-instrucoes">
+                    <a href="{{ route('evento.etapa2') }}"><img src="{{ asset('assets/voltar.png') }}" alt="" height="100%"></a>
                     <h1>CRIAR <span>EVENTO</span></h1>
                     <img src="{{ asset('assets/etapa3.png') }}" alt=""> <!-- Bolinhas de progresso -->
                 </div>

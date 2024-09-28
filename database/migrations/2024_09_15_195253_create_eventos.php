@@ -13,14 +13,22 @@ return new class extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('local');
-            $table->timestamp('data');
-            $table->decimal('valor', 8, 2);
-            $table->text('descricao')->nullable();
-            $table->string('categoria');
-            $table->string('imgURL')->nullable();
-            $table->timestamps(); // Se você quiser habilitar timestamps automáticos, pode remover "$timestamps = false" do modelo.
+            $table->string('evento_nome');
+            $table->date('evento_data'); // Armazenando apenas a data
+            $table->time('evento_hora'); // Armazenando apenas a hora
+            $table->text('evento_descricao')->nullable(); // Coluna para descrição
+            $table->string('evento_categoria');
+            $table->decimal('evento_preco', 8, 2);
+            $table->string('local_nome')->nullable();
+            $table->string('local_cep')->nullable();
+            $table->string('local_rua')->nullable();
+            $table->string('local_numero')->nullable();
+            $table->string('local_bairro')->nullable();
+            $table->string('local_cidade')->nullable();
+            $table->string('local_estado')->nullable();
+            $table->string('imagem')->nullable();
+            $table->string('grupo_link')->nullable();
+            $table->timestamps(); // Se quiser habilitar timestamps automáticos
         });
     }
 
