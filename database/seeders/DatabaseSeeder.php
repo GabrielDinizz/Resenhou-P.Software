@@ -110,6 +110,14 @@ class DatabaseSeeder extends Seeder
             'categoria' => 'sertanejo',
         ]);
 
+        User::create([
+            'name' => 'teste',
+            'email' => 'teste@email.com',
+            'password' => '12345678',
+            'cpf' => '999.999.99-99',
+            'birthdate' => '2000-01-01',
+            'avatar' => 'avatar2'
+        ]);
 
     }
 }

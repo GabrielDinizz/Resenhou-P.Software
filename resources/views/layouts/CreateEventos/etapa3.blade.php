@@ -38,7 +38,7 @@
                 </form>
             </div>
             <div class="continuar">
-                <form action="{{ route('etapa3') }}" method="GET">
+                <form action="{{ route('etapa2') }}" method="GET">
                     <button type="submit">CONTINUAR</button>
                 </form>
             </div>
