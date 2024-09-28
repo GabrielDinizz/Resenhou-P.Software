@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="{{ asset('css/componentsCSS/header.css') }}">
     <link rel="stylesheet" href=" {{ asset('css/createEventos/createEventos.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- jQuery Mask Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
 </head>
 
 <body>
@@ -25,25 +29,44 @@
                     a hora que a cidade irá parar para comparecer a essa Resenha!
                 </div>
             </div>
-            <div class="forms1etapa">
+            <div class="form-dados">
                 <form action="">
-                    <p>Nome</p>
+                    <p>Nome <span>*</span></p>
                     <input type="text"> <br>
 
-                    <p>Data</p>
-                    <input type="text"><br>
+                    <div class="input-2">
+                        <div>
+                            <p>Data <span>*</span></p>
+                            <input type="text" id="data" name="data" required placeholder="DD/MM/YYYY"><br>
+                        </div>
 
-                    <p>Hora</p>
-                    <input type="text"><br>
+                        <div>
+                            <p>Hora <span>*</span></p>
+                            <input type="text" id="hora" name="hora" required placeholder="00:00"><br>
+                        </div>
+                    </div>
+
                 </form>
             </div>
             <div class="continuar">
-                <form action="{{ route('etapa2') }}" method="GET">
+                <form action="{{ route('evento.etapa2') }}" method="GET">
                     <button type="submit">CONTINUAR</button>
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            // Máscara para data no formato DD/MM/YYYY
+            $('#data').mask('00/00/0000');
+            // Máscara para hora no formato HH:MM (24 horas)
+            $('#hora').mask('00:00');
+        });
+    </script>
 </body>
+
+
+
 
 </html>

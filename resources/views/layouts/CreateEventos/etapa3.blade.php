@@ -18,27 +18,49 @@
             <div class="instrucoes">
                 <div class="titulo-instrucoes">
                     <h1>CRIAR <span>EVENTO</span></h1>
-                    <img src="{{ asset('assets/etapa2.png') }}" alt=""> <!-- Bolinhas de progresso -->
+                    <img src="{{ asset('assets/etapa3.png') }}" alt=""> <!-- Bolinhas de progresso -->
                 </div>
                 <div class="txt-instrucoes">
-                    Conte todos os detalhes do seu evento, como a programação
-                    e os diferenciais da sua produção!
+                    <h2>LOCALIZAÇÃO</h2>
                 </div>
             </div>
-            <div class="forms1etapa">
+            <div class="form-dados">
                 <form action="">
-                    <p>Descrição do Evento</p>
-                    <textarea name="" id=""></textarea>
-
-                    <p>Categoria</p>
+                    <p>NOME DO LOCAL <span>*</span></p>
                     <input type="text"><br>
 
-                    <p>Preço do Ingresso</p>
+                    <p>CEP <span>*</span></p>
                     <input type="text"><br>
+
+                    <div class="input-3">
+                        <div>
+                            <p>AV./RUA <span>*</span></p>
+                            <input type="text"><br>
+                        </div>
+                        <div>
+                            <p>NÚMERO</p>
+                            <input type="text"><br>
+                        </div>
+                    </div>
+
+                    <p>BAIRRO <span>*</span></p>
+                    <input type="text"><br>
+
+                    <div class="input-2">
+                        <div>
+                            <p>CIDADE <span>*</span></p>
+                            <input type="text" disabled><br>
+                        </div>
+
+                        <div>
+                            <p>ESTADO <span>*</span></p>
+                            <input type="text" disabled><br>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="continuar">
-                <form action="{{ route('etapa2') }}" method="GET">
+                <form action="{{ route('evento.etapa4') }}" method="GET">
                     <button type="submit">CONTINUAR</button>
                 </form>
             </div>
