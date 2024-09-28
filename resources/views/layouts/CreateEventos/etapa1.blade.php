@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Criar Evento</title>
     <link rel="stylesheet" href="{{ asset('css/componentsCSS/header.css') }}">
-    <link rel="stylesheet" href=" {{ asset('css/createEventos/createEventos.css') }} ">
+    <link rel="stylesheet" href="{{ asset('css/createEventos/createEventos.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- jQuery Mask Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-
 </head>
 
 <body>
@@ -30,27 +29,25 @@
                 </div>
             </div>
             <div class="form-dados">
-                <form action="">
+                <form action="{{ route('evento.saveEtapa1') }}" method="POST">
+                    @csrf <!-- Adiciona o token CSRF -->
                     <p>Nome <span>*</span></p>
-                    <input type="text"> <br>
+                    <input type="text" name="evento_nome" value="{{ $dados['evento_nome'] ?? '' }}"><br>
 
                     <div class="input-2">
                         <div>
                             <p>Data <span>*</span></p>
-                            <input type="text" id="data" name="data" required placeholder="DD/MM/YYYY"><br>
+                            <input type="text" id="data" name="evento_data" value="{{ $dados['evento_data'] ?? '' }}" placeholder="DD/MM/YYYY"><br>
                         </div>
 
                         <div>
                             <p>Hora <span>*</span></p>
-                            <input type="text" id="hora" name="hora" required placeholder="00:00"><br>
+                            <input type="text" id="hora" name="evento_hora" value="{{ $dados['evento_hora'] ?? '' }}" placeholder="00:00"><br>
                         </div>
                     </div>
-
-                </form>
-            </div>
-            <div class="continuar">
-                <form action="{{ route('evento.etapa2') }}" method="GET">
-                    <button type="submit">CONTINUAR</button>
+                    <div class="continuar">
+                        <button type="submit">CONTINUAR</button> <!-- Botão para enviar o formulário -->
+                    </div>
                 </form>
             </div>
         </div>
@@ -65,8 +62,5 @@
         });
     </script>
 </body>
-
-
-
 
 </html>

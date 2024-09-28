@@ -30,31 +30,33 @@
                 </div>
             </div>
             <div class="form-dados">
-                <form action="">
+                <form action="{{ route("evento.saveEtapa2") }}" method="POST">
+                    @csrf
                     <p>Descrição do Evento <span>*</span> </p>
-                    <textarea name="" id=""></textarea>
+                    <!-- textarea não tem atributo "value" -->
+                    <textarea name="evento_descricao" id="" name="">
+                        {{ $dados['evento_descricao'] ?? '' }}
+                    </textarea>
 
                     <div class="input-2">
                         <div>
                             <p>Categoria <span>*</span> </p>
-                            <select id="categoria" name="categoria">
-                                <option value="pagode">Pagode</option>
-                                <option value="funk">Funk</option>
-                                <option value="rock">Rock</option>
-                                <option value="samba">Samba</option>
+                            <select id="categoria" name="evento_categoria">
+                                <option value="pagode" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'pagode') ? 'selected' : '' }}>Pagode</option>
+                                <option value="funk" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'funk') ? 'selected' : '' }}>Funk</option>
+                                <option value="rock" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'rock') ? 'selected' : '' }}>Rock</option>
+                                <option value="samba" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'samba') ? 'selected' : '' }}>Samba</option>
                             </select>
+
                         </div>
                         <div>
                             <p>Preço do Ingresso <span>*</span></p>
-                            <input type="text" id="preco" placeholder="R$00,00"><br>
+                            <input type="text" id="preco" name="evento_preco" placeholder="R$00,00" value="{{ $dados['evento_preco'] ?? '' }}"><br>
                         </div>
                     </div>
-
-                </form>
-            </div>
-            <div class="continuar">
-                <form action="{{ route('evento.etapa3') }}" method="GET">
-                    <button type="submit">CONTINUAR</button>
+                    <div class="continuar">
+                        <button type="submit">CONTINUAR</button>
+                    </div>
                 </form>
             </div>
         </div>

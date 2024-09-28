@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('eventos', function (Blueprint $table) {
             $table->id();
             $table->string('evento_nome');
-            $table->date('evento_data'); // Armazenando apenas a data
-            $table->time('evento_hora'); // Armazenando apenas a hora
+            $table->string('evento_data'); // Armazenando apenas a data
+            $table->string('evento_hora'); // Armazenando apenas a hora
             $table->text('evento_descricao')->nullable(); // Coluna para descrição
             $table->string('evento_categoria');
-            $table->decimal('evento_preco', 8, 2);
+            $table->string('evento_preco');
             $table->string('local_nome')->nullable();
             $table->string('local_cep')->nullable();
             $table->string('local_rua')->nullable();
