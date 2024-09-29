@@ -53,7 +53,7 @@
                             <p><strong>Data:</strong> {{ date('D, d M Y H:i', strtotime($evento->data)) }}</p>
                             <p><strong>Localização:</strong> {{ $evento->local_nome }}</p>
                             <p><strong>Categoria:</strong> {{ $evento->evento_categoria }}</p>
-                            <p><strong>Preço:</strong> ${{ number_format($evento->evento_preco, 2, ',', '.') }}</p>
+                            <p><strong>Preço:</strong> ${{ $evento->evento_preco }}</p>
                         </div>
                         <div class="modal-descricao">
                             <h3>DESCRIÇÃO DO <span>EVENTO</span></h3>

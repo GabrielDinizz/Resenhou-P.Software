@@ -26,26 +26,27 @@
                 </div>
             </div>
             <div class="form-dados">
-                <form action="">
+                <form action="{{ route("evento.saveEtapa3") }}" method="POST">
+                    @csrf
                     <p>NOME DO LOCAL <span>*</span></p>
-                    <input type="text"><br>
+                    <input type="text" value="{{ $dados['local_nome'] ?? '' }}" name="local_nome"><br>
 
                     <p>CEP <span>*</span></p>
-                    <input type="text"><br>
+                    <input type="text" value="{{ $dados['local_cep'] ?? '' }}" name="local_cep"><br>
 
                     <div class="input-3">
                         <div>
                             <p>AV./RUA <span>*</span></p>
-                            <input type="text"><br>
+                            <input type="text" value="{{ $dados['local_rua'] ?? '' }}" name="local_rua"><br>
                         </div>
                         <div>
                             <p>NÚMERO</p>
-                            <input type="text"><br>
+                            <input type="text" value="{{ $dados['local_numero'] ?? '' }}" name="local_numero"><br>
                         </div>
                     </div>
 
                     <p>BAIRRO <span>*</span></p>
-                    <input type="text"><br>
+                    <input type="text" value="{{ $dados['local_bairro'] ?? '' }}" name="local_bairro"><br>
 
                     <div class="input-2">
                         <div>
@@ -58,11 +59,9 @@
                             <input type="text" disabled><br>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="continuar">
-                <form action="{{ route('evento.etapa4') }}" method="GET">
-                    <button type="submit">CONTINUAR</button>
+                    <div class="continuar">
+                        <button type="submit">CONTINUAR</button>
+                    </div>
                 </form>
             </div>
         </div>

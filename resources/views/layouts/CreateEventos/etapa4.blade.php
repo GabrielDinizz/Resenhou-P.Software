@@ -26,7 +26,8 @@
                 </div>
             </div>
             <div class="form-dados">
-                <form action="">
+                <form action="{{ route("evento.saveEtapa4") }}" method="POST">
+                    @csrf
                     <p>Imagem</p>
                     <div class="upload-container" id="uploadContainer">
                         <input type="file" id="imageUpload" name="image" accept="image/*" hidden>
@@ -41,12 +42,12 @@
                     </div>
 
                     <p>Link para o grupo do whatsapp:</p>
-                    <input type="text" placeholder="https://chat.whatsapp.com/grupo"><br>
-                </form>
-            </div>
-            <div class="continuar">
-                <form action="{{ route('evento.etapa5') }}" method="GET">
-                    <button type="submit">CONTINUAR</button>
+                    <input type="text" placeholder="https://chat.whatsapp.com/grupo" value="{{ $dados['grupo_link'] ?? '' }}" name="grupo_link"><br>
+
+                    <div class="continuar">
+                        <button type="submit">CONTINUAR</button>
+                    </div>
+
                 </form>
             </div>
         </div>

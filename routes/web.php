@@ -20,8 +20,10 @@ Route::get('/evento/etapa2', [CreateEventoController::class, 'Etapa2'])->name('e
 Route::post('/evento/etapa2', [CreateEventoController::class, 'saveEtapa2'])->name('evento.saveEtapa2');
 
 Route::get('/evento//etapa3', [CreateEventoController::class, 'Etapa3'])->name('evento.etapa3');
+Route::post('/evento/etapa3', [CreateEventoController::class, 'saveEtapa3'])->name('evento.saveEtapa3');
 
 Route::get('/evento//etapa4', [CreateEventoController::class, 'Etapa4'])->name('evento.etapa4');
+Route::post('/evento/etapa4', [CreateEventoController::class, 'saveEtapa4'])->name('evento.saveEtapa4');
 
 Route::get('/evento//etapa5', [CreateEventoController::class, 'Etapa5'])->name('evento.etapa5');
 
