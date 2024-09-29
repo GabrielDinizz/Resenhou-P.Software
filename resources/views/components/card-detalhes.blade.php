@@ -6,22 +6,22 @@
             @foreach ($eventos as $evento)
             <div class="card-listEventos">
                 <div class="img-cardList">
-                    <img src="{{$evento->imgURL}}" alt="">
+                    <img src="{{$evento->imagem}}" alt="">
                 </div>
                 <div class="container-descricao">
                     <div class="descricao-cardList">
                         <div class="data-cardList">
-                            <p>{{ date('D', strtotime($evento->data)) }}</p>
-                            <h3>{{ date('d', strtotime($evento->data)) }}</h3>
-                            <p>{{ date('M', strtotime($evento->data)) }}</p>
-                            <h4>{{ date('H:i', strtotime($evento->data)) }}</h4>
+                            <p>{{ date('D', strtotime($evento->evento_data)) }}</p>
+                            <h3>{{ date('d', strtotime($evento->evento_data)) }}</h3>
+                            <p>{{ date('M', strtotime($evento->evento_data)) }}</p>
+                            <h4>{{ date('H:i', strtotime($evento->evento_data)) }}</h4>
                         </div>
                         <div class="text-cardList">
                             <div class="title-cardList">
-                                <h2>{{ $evento->nome }}</h2>
+                                <h2>{{ $evento->evento_nome }}</h2>
                                 <div class="localizacaoEvent">
                                     <img src="{{ asset('assets/localizacao-icon.svg') }}">
-                                    <p>{{ $evento->local }}</p>
+                                    <p>{{ $evento->local_nome }}</p>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-img">
-                            <img src={{ $evento->imgURL }} alt="">
+                            <img src={{ $evento->imagem }} alt="">
                         </div>
                         <div class="modal-nomeEvento">
                             <h3>{{$evento->nome}}</h3>
@@ -51,9 +51,9 @@
                         <div class="modal-body">
                             <h3>DETALHES DO <span>EVENTO</span></h3>
                             <p><strong>Data:</strong> {{ date('D, d M Y H:i', strtotime($evento->data)) }}</p>
-                            <p><strong>Localização:</strong> {{ $evento->local }}</p>
-                            <p><strong>Categoria:</strong> {{ $evento->categoria }}</p>
-                            <p><strong>Preço:</strong> ${{ number_format($evento->valor, 2, ',', '.') }}</p>
+                            <p><strong>Localização:</strong> {{ $evento->local_nome }}</p>
+                            <p><strong>Categoria:</strong> {{ $evento->evento_categoria }}</p>
+                            <p><strong>Preço:</strong> ${{ $evento->evento_preco }}</p>
                         </div>
                         <div class="modal-descricao">
                             <h3>DESCRIÇÃO DO <span>EVENTO</span></h3>

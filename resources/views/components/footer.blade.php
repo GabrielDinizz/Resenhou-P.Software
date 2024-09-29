@@ -10,10 +10,10 @@
             </div>
 
             <div class="footer-column">
-                <h3 class="categoriastitulo">CATEGORIAS</h3>
-                <a href="#" class="categorias-txt">Festa e Shows</a>
-                <a href="#" class="categorias-txt">Festa Privada</a>
-                <a href="#" class="categorias-txt">Grátis</a>
+                <h3 class="categoriastitulo">Categorias</h3>
+                <a href="#" class="categorias-txt">Pagode</a>
+                <a href="#" class="categorias-txt">Funk</a>
+                <a href="#" class="categorias-txt">Rock</a>
             </div>
 
             <div class="footer-column">
@@ -26,7 +26,7 @@
                     <label for="mensagem">Mensagem:</label><br>
                     <textarea id="mensagem" name="mensagem"></textarea><br>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit" id="btn-enviar-sac">Enviar</button>
                 </form>
             </div>
         </div>

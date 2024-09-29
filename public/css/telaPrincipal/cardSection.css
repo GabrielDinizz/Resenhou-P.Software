@@ -129,3 +129,53 @@ button {
 button:focus {
     outline: none;
 }
+
+
+.event-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7A3D96; 
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 5%; /* Adiciona 50px de margem inferior */
+
+}
+
+.event-title {
+    font-size: 3em;
+}
+
+.title-part1 {
+    color: #FFFFFF; /
+}
+
+.title-highlight {
+    color: #FF4F7A; 
+}
+
+.event-subtitle {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.create-event-btn {
+    background-color: #BF3FFF;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-event-btn:hover {
+    background-color: #8A24B0;
+}

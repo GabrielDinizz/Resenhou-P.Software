@@ -17,6 +17,7 @@
     width: 100%;
     background-color: #F7317D;
     text-align: center;
+    padding: .5rem 0;
 }
 
 .modal-body p{

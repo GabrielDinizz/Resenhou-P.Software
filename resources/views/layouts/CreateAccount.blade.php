@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/componentsCSS/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/componentsCSS/createAccount.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/telaPrincipal/rodapeSection.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
