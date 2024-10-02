@@ -59,6 +59,10 @@
                             <h3>DESCRIÇÃO DO <span>EVENTO</span></h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima expedita earum illum, magnam placeat debitis recusandae. Nemo, sunt. Ullam praesentium temporibus similique soluta aut aspernatur cupiditate pariatur dignissimos reprehenderit hic.</p>
                         </div>
+                        <div class="modal-criadoPor">
+                        <h3>CRIADO <span>POR</span></h3>
+                        <p>teste</p>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
