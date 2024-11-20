@@ -10,4 +10,5 @@
 ### Rodar os Seeders <br>
 Se você tiver seeders configurados e quiser popular o banco de dados com dados iniciais após a migração, você pode rodar os seeders <br>
 -> php artisan db:seed <br>
+-> php artisan storage:link
 
