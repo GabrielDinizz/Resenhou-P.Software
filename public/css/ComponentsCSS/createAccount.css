@@ -7,23 +7,29 @@
     font-family: 'Days One', sans-serif;
     caret-color: transparent; 
     margin: 6rem 0;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    padding: 1rem; /* Adiciona espaçamento em telas pequenas */
 }
 
 .title {
     font-family: 'Days One', sans-serif; 
     font-size: xxx-large;
     font-weight: 300;
+    text-align: center; /* Centraliza o título em telas menores */
 }
-.titulo2{
+
+.titulo2 {
     font-family: 'Days One', sans-serif;
     color: #fff;
     font-size: x-large;
     font-weight: 300;
+    text-align: center; /* Centraliza subtítulos */
 }
 
 .login {
     width: 100%;
     max-width: 550px;
+    padding: 1rem; /* Adiciona espaçamento interno */
 }
 
 .login h2 {
@@ -109,7 +115,7 @@
     transition: 0.5s;
     display: block; /* Adiciona display block */
     margin: 0 auto; /* Centraliza o botão */
-     font-family: 'Days One', sans-serif;
+    font-family: 'Days One', sans-serif;
 }
 
 button:hover {
@@ -131,10 +137,12 @@ p a:hover {
     text-decoration: underline;
     color: #732ec2;
 }
-input{
+
+input {
     background-color: #fff;
 }
-div.caixa1{
+
+div.caixa1 {
     border-radius: 100px;
     border: .3rem solid #ffff;
 }
@@ -143,4 +151,60 @@ div.caixa1{
     display: flex;
     gap: 1rem;
     padding-top: 1rem;
+    justify-content: center; /* Centraliza em telas pequenas */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .title {
+        font-size: xx-large; /* Reduz tamanho do título */
+    }
+
+    .titulo2 {
+        font-size: large; /* Reduz subtítulo */
+    }
+
+    .containerLogin {
+        margin: 3rem 0; /* Ajusta espaçamento para telas pequenas */
+    }
+
+    .login {
+        max-width: 100%; /* Usa toda a largura disponível */
+        padding: 0.5rem; /* Reduz o espaçamento interno */
+    }
+
+    #buttonLogar {
+        font-size: 18px; /* Ajusta tamanho do botão */
+    }
+
+    .caixa1 input {
+        font-size: 14px; /* Ajusta fonte para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: x-large;
+    }
+
+    .titulo2 {
+        font-size: medium;
+    }
+
+    .login {
+        padding: 0.5rem;
+    }
+
+    #buttonLogar {
+        font-size: 16px;
+        padding: 10px 20px; /* Reduz tamanho do botão */
+    }
+
+    .caixa1 input {
+        font-size: 12px;
+    }
+
+    .esquecisenha {
+        font-size: 12px; /* Ajusta fonte */
+    }
 }
