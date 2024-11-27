@@ -2,31 +2,39 @@
 
 .containerLogin {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
     width: 100%;
-    justify-content: center;
+    height: 80vh; /* Altura total da tela */
     font-family: 'Days One', sans-serif;
-    caret-color: transparent; 
-    margin-top: 6rem;
+    caret-color: transparent;
+    box-sizing: border-box;
+    padding: 1rem; /* Garantir espaço em telas menores */
 }
 
 .title {
-    font-family: 'Days One', sans-serif; 
-    font-size: xxx-large;
+    font-family: 'Days One', sans-serif;
+    font-size: calc(2rem + 2vw);
 }
-.titulo2{
+
+.titulo2 {
     font-family: 'Days One', sans-serif;
     color: #fff;
-    font-size: x-large;
+    font-size: calc(1.2rem + 1vw);
 }
 
 .login {
     position: relative;
-    width: 600px;
-    padding: 60px;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
     background: rgba(247, 49, 125, 1);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    border-radius: 110px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    margin: 0 auto; /* Garante alinhamento horizontal */
 }
 
 .login h2 {
@@ -34,6 +42,7 @@
     padding: 0;
     color: #ffffff;
     text-align: center;
+    font-size: calc(1.5rem + 1vw);
 }
 
 .caixa1 {
@@ -45,7 +54,7 @@
 }
 
 .caixa1 input {
-    width: calc(100% - 40px); 
+    width: calc(100% - 40px);
     padding: 10px 0;
     background: transparent;
     border: none;
@@ -53,7 +62,7 @@
     color: rgba(0, 0, 0, 0.5);
     font-size: 16px;
     padding-left: 10px;
-    caret-color: black; 
+    caret-color: black;
 }
 
 .caixa1 label {
@@ -80,7 +89,7 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    width: 24px; 
+    width: 24px;
     height: 24px;
 }
 
@@ -108,11 +117,11 @@
     cursor: pointer;
     border-radius: 100px;
     width: 70%;
-    font-size: 25px;
+    font-size: calc(1rem + 0.5vw);
     transition: 0.5s;
-    display: block; /* Adiciona display block */
-    margin: 0 auto; /* Centraliza o botão */
-     font-family: 'Days One', sans-serif;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Days One', sans-serif;
 }
 
 button:hover {
@@ -134,16 +143,78 @@ p a:hover {
     text-decoration: underline;
     color: #732ec2;
 }
-input{
+
+input {
     background-color: #fff;
 }
-div.caixa1{
+
+div.caixa1 {
     background-color: #ffffff;
     border-radius: 100px;
 }
 
 #cadastre {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding-top: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .containerLogin {
+        margin-top: 2rem;
+        padding: 1rem;
+        
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .login {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .titulo2 {
+        font-size: 1rem;
+    }
+
+    #buttonLogar {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerLogin {
+        padding: 0.5rem;
+    }
+
+    .login {
+        padding: 15px;
+        width: 95%; /* Reduz a largura */
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .titulo2 {
+        font-size: 0.8rem;
+    }
+
+    #buttonLogar {
+        font-size: 0.9rem;
+        width: 90%;
+    }
+
+    .caixa1 input {
+        font-size: 14px;
+    }
+
+    .esquecisenha {
+        font-size: 12px;
+    }
 }

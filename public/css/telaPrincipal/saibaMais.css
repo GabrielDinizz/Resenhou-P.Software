@@ -1,0 +1,28 @@
+/* Estilização isolada apenas para o card */
+.card-texto {
+    background-image: linear-gradient(to bottom, #9a2ecb, #a742d8, #b454e4,#c165f1, #ce76fe) ;
+    color: white; /* Letras brancas */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center; /* Centraliza o texto dentro do card */
+    max-width: 800px; /* Largura máxima */
+    margin: 50px auto; /* Centraliza o card horizontalmente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra suave */
+    font-family: 'Arial', sans-serif; /* Fonte local apenas para o card */
+  }
+  
+  /* Títulos do card */
+  .card-texto h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Pequena sombra */
+  }
+  
+  /* Parágrafos do card */
+  .card-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  

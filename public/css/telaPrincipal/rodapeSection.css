@@ -121,3 +121,42 @@ form label {
     border-radius: 10px;
     font-size: 1rem;
 }
+
+/* Responsividade para dispositivos menores */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-column {
+        padding: 10px 0;
+    }
+
+    .styled-input,
+    .styled-textarea {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .categorias-txt {
+        padding: 10px 0; /* Ajuste no espaçamento dos links */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-container {
+        padding: 10px;
+    }
+
+    .categoriastitulo,
+    #textform {
+        font-size: 24px; /* Reduz tamanho da fonte para telas muito pequenas */
+    }
+
+    #btn-enviar-sac {
+        font-size: 0.9rem; /* Ajuste no tamanho do botão */
+        padding: 10px 15px; /* Ajuste no padding do botão */
+    }
+}
