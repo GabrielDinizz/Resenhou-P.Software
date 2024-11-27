@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Evento extends Model
 {
@@ -31,4 +32,17 @@ class Evento extends Model
         'imagem',
         'grupo_link',
     ];
+
+    // Accessor para data formatada
+    public function getFormattedDataAttribute()
+    {
+        Carbon::setLocale('pt_BR');
+        return Carbon::parse($this->evento_data)->translatedFormat('l, d \d\e F \d\e Y');
+    }
+
+    // Accessor para hora formatada
+    public function getFormattedHoraAttribute()
+    {
+        return Carbon::parse($this->evento_hora)->format('H:i');
+    }
 }

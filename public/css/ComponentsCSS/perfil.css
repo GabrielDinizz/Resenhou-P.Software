@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 
 .info-section, .avatar-section {
-    width: 50%;
+    width: 90%;
     padding: 2rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
 }
 
 .info-section form div, .avatar-section form div {
@@ -23,10 +28,10 @@
 }
 
 .info-section input, .avatar-section input {
-    width: 100%;
+    width: 250px;
     padding: 0.75rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 50px;
 }
 
 .avatar-preview img {
@@ -42,18 +47,18 @@
     padding: 15px 30px;
     color: #fff;
     cursor: pointer;
-    border-radius: 100px;
-    width: 70%;
-    font-size: 25px;
+    border-radius: 8px;
+    width: 250px;
+    font-size: 21px;
     transition: 0.5s;
-    display: block; /* Adiciona display block */
-    margin: 0 auto; /* Centraliza o botão */
-     font-family: 'Days One', sans-serif;
+    display: block; 
+    font-family: 'Days One', sans-serif;
 }
 
 .buttonsperfil:hover {
     background: #732ec2;
 }
+
 #titlei {
     color: white;
     font-family: 'Days One', sans-serif;
@@ -66,27 +71,25 @@
     font-family: 'Days One', sans-serif;
     color: white;
     font-size: 1.3rem;
-    
 }
-#titlep{
+
+#titlep {
     font-size: 2.5rem;
-  color: #732ec2;
+    color: #732ec2;
 }
-.formstit{
+
+.formstit {
     padding-top: 20px;
     padding-bottom: 20px;
     font-family: 'Days One', sans-serif;
     color: #732ec2;
     font-size: 2rem;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
-
 }
-
-
-
 
 .select-style {
     width: 100%;
@@ -95,59 +98,164 @@
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
-  }
-  
-#avatar{
-    width: 20%;
-   border-radius: 5px;
-   margin: 20px auto;
-   font-family: 'Days One', sans-serif;
-   font-size: 0.8rem;
-   color: #F7317D;
-
 }
- 
-  
-  .avatar-preview {
+
+#avatar {
+    width: 20%;
+    border-radius: 5px;
+    margin: 20px auto;
+    font-family: 'Days One', sans-serif;
+    font-size: 0.8rem;
+    color: #F7317D;
+}
+
+.avatar-preview {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
     margin: 20px auto;
-  }
-  
-  .avatar-preview img {
+}
+
+.avatar-preview img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  /* Estilo para títulos de dropdown */
+}
+
 .dropdown-title {
     cursor: pointer;
     border-radius: 4px;
     margin-top: 10px;
-    
     padding-top: 20px;
     padding-bottom: 20px;
     font-family: 'Days One', sans-serif;
-    color: #732ec2;
+    color: #e6e6e6;
     font-size: 2rem;
 }
 
-/* Estilo para o conteúdo do dropdown */
 .dropdown-content {
     display: none;
     padding: 10px;
- 
     border-radius: 4px;
-
 }
 
-/* Mostrar o dropdown quando ativo */
 .dropdown-content.show {
     display: block;
 }
 
- 
- 
-  
+.setaimg {
+    width: 40px;
+    height: 30px;   
+}
+
+.setafechadaimg {
+    width: 40px;
+    height: 30px;
+}
+
+#formtitle1 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#formtitle2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formtitle3 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#formtitle4 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#infosec1 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#infosec2 {
+    height: 100%;
+    width: 50%;
+    display: flex; 
+    flex-direction: column;
+}
+
+.buttonsperfil2 {
+    background-color: #F7317D;
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 60%;
+    font-size: 25px;
+    transition: 0.5s;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Days One', sans-serif;
+}
+
+.buttonsperfil2:hover {
+    background: #732ec2;
+}
+
+form {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+#avatar-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.avatar-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.avatar-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.avatar-option input[type="radio"] {
+    display: none;
+}
+
+.avatar-option input[type="radio"]:checked + label .avatar-image {
+    border: 2px solid blue;
+}
+
+.avatar-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    transition: border 0.3s;
+    cursor: pointer;
+    border: 2px solid #F7317D;
+}
+#avataratual{
+    border: 2px solid #F7317D;
+}

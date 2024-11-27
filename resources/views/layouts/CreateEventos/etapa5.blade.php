@@ -31,10 +31,12 @@
             </div>
 
             <div class="continuar">
-                <form action="{{ route('evento.etapa5') }}" method="GET">
+                <form action="{{ route('evento.saveEtapa5') }}" method="POST">
+                    @csrf
                     <button type="submit">CRIAR EVENTO</button>
                 </form>
             </div>
+
         </div>
     </div>
 </body>

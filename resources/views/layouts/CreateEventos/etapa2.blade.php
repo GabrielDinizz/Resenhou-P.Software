@@ -30,30 +30,38 @@
                 </div>
             </div>
             <div class="form-dados">
-                <form action="{{ route("evento.saveEtapa2") }}" method="POST">
+                <form action="{{ route('evento.saveEtapa2') }}" method="POST">
                     @csrf
-                    <p>Descrição do Evento <span>*</span> </p>
-                    <!-- textarea não tem atributo "value" -->
-                    <textarea name="evento_descricao" id="" name="">
-                        {{ $dados['evento_descricao'] ?? '' }}
-                    </textarea>
+                    <p>Descrição do Evento <span>*</span></p>
+                    <textarea name="evento_descricao" id="evento_descricao" rows="5">{{ old('evento_descricao', $dados['evento_descricao'] ?? '') }}</textarea>
+                    @error('evento_descricao')
+                    <span class="error">{{ $message }}</span>
+                    @enderror
 
                     <div class="input-2">
                         <div>
-                            <p>Categoria <span>*</span> </p>
+                            <p>Categoria <span>*</span></p>
                             <select id="categoria" name="evento_categoria">
-                                <option value="pagode" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'pagode') ? 'selected' : '' }}>Pagode</option>
-                                <option value="funk" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'funk') ? 'selected' : '' }}>Funk</option>
-                                <option value="rock" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'rock') ? 'selected' : '' }}>Rock</option>
-                                <option value="samba" {{ (isset($dados['evento_categoria']) && $dados['evento_categoria'] == 'samba') ? 'selected' : '' }}>Samba</option>
+                                <option value="pagode" {{ old('evento_categoria', $dados['evento_categoria'] ?? '') == 'pagode' ? 'selected' : '' }}>Pagode</option>
+                                <option value="funk" {{ old('evento_categoria', $dados['evento_categoria'] ?? '') == 'funk' ? 'selected' : '' }}>Funk</option>
+                                <option value="sertanejo" {{ old('evento_categoria', $dados['evento_categoria'] ?? '') == 'sertanejo' ? 'selected' : '' }}>Sertanejo</option>
+                                <option value="eletronica" {{ old('evento_categoria', $dados['evento_categoria'] ?? '') == 'eletronica' ? 'selected' : '' }}>Eletrônica</option>
+                                <option value="baile" {{ old('evento_categoria', $dados['evento_categoria'] ?? '') == 'baile' ? 'selected' : '' }}>Baile</option>
                             </select>
-
+                            @error('evento_categoria')
+                            <span class="error">{{ $message }}</span>
+                            @enderror
                         </div>
+
                         <div>
-                            <p>Preço do Ingresso <span>*</span></p>
-                            <input type="text" id="preco" name="evento_preco" placeholder="R$00,00" value="{{ $dados['evento_preco'] ?? '' }}"><br>
+                            <p>Preço do Ingresso R$ <span>*</span></p>
+                            <input type="text" id="preco" name="evento_preco" placeholder="00,00" value="{{ old('evento_preco', $dados['evento_preco'] ?? '') }}">
+                            @error('evento_preco')
+                            <span class="error">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
+
                     <div class="continuar">
                         <button type="submit">CONTINUAR</button>
                     </div>
@@ -65,7 +73,7 @@
     <script>
         $(document).ready(function() {
             // Máscara para data no formato DD/MM/YYYY
-            $('#preco').mask('R$00,00');
+            $('#preco').mask('00,00');
         });
     </script>
 </body>

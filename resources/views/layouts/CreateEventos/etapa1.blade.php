@@ -30,23 +30,36 @@
             </div>
             <div class="form-dados">
                 <form action="{{ route('evento.saveEtapa1') }}" method="POST">
-                    @csrf <!-- Adiciona o token CSRF -->
+                    @csrf
                     <p>Nome <span>*</span></p>
-                    <input type="text" name="evento_nome" value="{{ $dados['evento_nome'] ?? '' }}"><br>
+                    <input type="text" name="evento_nome" value="{{ old('evento_nome', $dados['evento_nome'] ?? '') }}">
+                    @error('evento_nome')
+                    <span class="error">{{ $message }}</span>
+                    @enderror
+                    <br>
 
                     <div class="input-2">
                         <div>
                             <p>Data <span>*</span></p>
-                            <input type="text" id="data" name="evento_data" value="{{ $dados['evento_data'] ?? '' }}" placeholder="DD/MM/YYYY"><br>
+                            <input type="text" id="data" name="evento_data" value="{{ old('evento_data', $dados['evento_data'] ?? '') }}" placeholder="DD/MM/YYYY">
+                            @error('evento_data')
+                            <span class="error">{{ $message }}</span>
+                            @enderror
+                            <br>
                         </div>
 
                         <div>
                             <p>Hora <span>*</span></p>
-                            <input type="text" id="hora" name="evento_hora" value="{{ $dados['evento_hora'] ?? '' }}" placeholder="00:00"><br>
+                            <input type="text" id="hora" name="evento_hora" value="{{ old('evento_hora', $dados['evento_hora'] ?? '') }}" placeholder="00:00">
+                            @error('evento_hora')
+                            <span class="error">{{ $message }}</span>
+                            @enderror
+                            <br>
                         </div>
                     </div>
+
                     <div class="continuar">
-                        <button type="submit">CONTINUAR</button> <!-- Botão para enviar o formulário -->
+                        <button type="submit">CONTINUAR</button>
                     </div>
                 </form>
             </div>
