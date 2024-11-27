@@ -1,26 +1,29 @@
 <section>
     <div>
-        <h1 class="titleCard"><span>PROXIMAS</span> RESENHAS</h1>
+        <h1 class="titleCard"><span>PRÓXIMAS</span> RESENHAS</h1>
     </div>
     <div class="flex-card">
         @foreach ($eventos as $evento)
         <div class="card">
             <div class="div-img-card">
-                <img src="{{$evento->imagem}}"
-                    alt="">
+                @if(!empty($evento->imagem))
+                @php
+                $imagePath = is_array(json_decode($evento->imagem, true))
+                ? json_decode($evento->imagem, true)[0]
+                : $evento->imagem;
+                @endphp
+                <img src="{{ asset('storage/' . $imagePath) }}" alt="Imagem do Evento">
+                @endif
             </div>
             <div class="descricao-card">
-
-                <p>Daqui ...</p>
-                <h2>{{$evento->evento_nome}}</h2>
+                <p>{{ $evento->formatted_data }}</p> <!-- Data formatada -->
+                <h2>{{ $evento->evento_nome }}</h2>
             </div>
         </div>
         @endforeach
-        <!-- Se $eventos for do tipo LengthAwarePaginator gera a paginação, contudo se for do tipo Collection não gera, pois o objeto Collection não possui o método links  -->
         @if (get_class($eventos) == 'Illuminate\Pagination\LengthAwarePaginator')
-        {{$eventos->links()}}
+        {{ $eventos->links() }}
         @endif
-        <!-- dd(variavel) -> Exibe o conteúdo do objeto na view -> semelhante ao var_dump() -->
     </div>
     <div class="carousel">
         <button class="prev">&#9664;</button>

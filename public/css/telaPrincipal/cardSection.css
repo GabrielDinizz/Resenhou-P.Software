@@ -47,6 +47,7 @@ h1 span {
     background-color: #9A2DCB;
     padding: 1rem 1rem;
     border-radius: 0 0 .5rem .5rem;
+    text-align: center;
 }
 
 .descricao-card p {
