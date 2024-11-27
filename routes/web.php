@@ -12,6 +12,8 @@ Route::get('/sac', [SacController::class, 'create'])->name('sac.create');
 Route::post('/sac', [SacController::class, 'store'])->name('sac.store');
 
 Route::get('/', [TelaPrincipalController::class, 'index'])->name('pagina-inicial');
+Route::get('/saibamais', [TelaPrincipalController::class, 'saibaMais'])->name('saiba-mais');
+
 
 Route::get('/evento/etapa1', [CreateEventoController::class, 'Etapa1'])->name('evento.etapa1');
 Route::post('/evento/etapa1', [CreateEventoController::class, 'saveEtapa1'])->name('evento.saveEtapa1');
