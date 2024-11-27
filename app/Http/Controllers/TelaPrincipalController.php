@@ -13,5 +13,10 @@ class TelaPrincipalController extends Controller
             'eventos' => Evento::all()
         ]); 
     }
+  
+    public function saibaMais()
+    {
+        return view('layouts.SaibaMais'); 
+    }
 
 }
