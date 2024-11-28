@@ -142,6 +142,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     padding-top: 30px;
+    min-height: 71vh;
 }
 #titleevents{
     display: flex;
@@ -180,4 +181,64 @@
 
 .container-descricao {
     padding: 1rem;
+}
+/* Responsividade para dispositivos menores como iPhone SE */
+@media (max-width: 375px) {
+    .grid-eventos {
+        grid-template-columns: 1fr; /* Coloca os itens em uma única coluna */
+        gap: 2rem; /* Reduz o espaçamento entre os itens */
+    }
+
+    .descricao-cardList {
+        flex-direction: column; /* Alinha os elementos em coluna */
+        text-align: center;
+    }
+
+    .text-cardList {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+    }
+
+    #textevents {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .img-cardList {
+        height: 12rem; /* Reduz a altura da imagem */
+    }
+}
+
+/* Responsividade para tablets como iPad */
+@media (min-width: 376px) and (max-width: 768px) {
+    .grid-eventos {
+        grid-template-columns: 1fr 1fr; /* Ajusta para duas colunas */
+        gap: 3rem;
+    }
+
+    .img-cardList {
+        height: 14rem; /* Ajusta a altura da imagem */
+    }
+
+    #titleevents {
+        width: 90%; /* Ajusta o tamanho do contêiner do título */
+    }
+
+    #textevents {
+        font-size: 2.5rem; /* Reduz ligeiramente o tamanho do texto */
+    }
+}
+
+/* Responsividade para notebooks */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-eventos {
+        grid-template-columns: 1fr 1fr 1fr; /* Mantém três colunas */
+        gap: 3rem; /* Ajusta o espaçamento */
+    }
+
+    .text-cardList {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+    }
+
+    .img-cardList {
+        height: 15rem; /* Ajusta a altura da imagem */
+    }
 }

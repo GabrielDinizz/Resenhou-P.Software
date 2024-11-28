@@ -87,7 +87,6 @@ h1 span {
     display: flex;
     transition: transform 0.5s ease;
 }
-
 .carousel-item {
     flex: 0 0 100px; /* largura do item */
     display: flex;
@@ -179,4 +178,118 @@ button:focus {
 
 .create-event-btn:hover {
     background-color: #8A24B0;
+}
+@media (max-width: 1024px) {
+    .titleCard {
+        font-size: 3rem;
+    }
+
+    .div-img-card {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .carousel-track-container {
+        width: 250px;
+    }
+
+    .event-title {
+        font-size: 2.5em;
+    }
+
+    .create-event-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 375px) { 
+    .titleCard {
+        font-size: 1.6rem !important; 
+        text-align: center;
+        margin: 0.8rem 0;
+    }
+
+    .flex-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; 
+        padding: 0 1rem; 
+    }
+
+    .div-img-card {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .div-img-card img {
+        object-fit: cover; 
+    }
+
+    .descricao-card p,
+    .descricao-card h2 {
+        font-size: 0.8rem; 
+    }
+
+    .carousel-track-container {
+        width: 160px; 
+    }
+
+    .carousel-item {
+        flex: 0 0 80px; 
+    }
+
+    .event-title {
+        font-size: 1.4rem; 
+        text-align: center;
+    }
+
+    .create-event-btn {
+        padding: 6px 10px; 
+        font-size: 0.75rem; 
+    }
+
+    .event-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px; 
+    }
+
+    .event-subtitle {
+        font-size: 0.85rem; 
+        margin-top: 0.4rem; 
+    }
+}
+
+@media (max-width: 1440px) { 
+    .titleCard {
+        font-size: 3.5rem;
+    }
+
+    .div-img-card {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .descricao-card p,
+    .descricao-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-track-container {
+        width: 350px; 
+    }
+
+    .event-title {
+        font-size: 2.5em;
+    }
+
+    .create-event-btn {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .event-banner {
+        justify-content: center;
+    }
 }

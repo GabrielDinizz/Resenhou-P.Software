@@ -17,6 +17,7 @@ section {
 
 body {
     background-color: #2D2D2F;
+    min-height: 100vh;
 }
 
 p {
@@ -29,4 +30,44 @@ h3 {
 
 a {
     text-decoration: none;
+}
+ @media (max-width: 1440px) { 
+    section {
+        padding: 0 1rem; 
+    }
+
+    body {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 1024px) { /* Tablets */
+    section {
+        padding: 0 2rem; 
+    }
+
+    body {
+        font-size: 0.9rem; 
+    }
+
+    p, h3 {
+        text-align: center; 
+    }
+}
+@media (max-width: 375px) { 
+    section {
+        padding: 0 1rem; 
+    }
+
+    body {
+        font-size: 0.75rem;
+    }
+
+    p, h3 {
+        text-align: justify; 
+    }
+
+    a {
+        font-size: 0.8rem; 
+    }
 }

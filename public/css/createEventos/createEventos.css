@@ -192,3 +192,131 @@ p {
     border-color: #28a745;
     background-color: #e9f7e9;
 }
+@media (max-width: 375px) {
+    .container {
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .titulo-instrucoes h1 {
+        font-size: 2rem; 
+        text-align: center;
+    }
+
+    .txt-instrucoes {
+        font-size: 1rem; 
+        line-height: 2rem; 
+    }
+
+    .form-dados input, 
+    .form-dados textarea, 
+    #categoria {
+        font-size: 1rem; 
+        height: 40px; 
+    }
+
+    .continuar button {
+        padding: 0.8rem 2rem; 
+        font-size: 1rem; 
+    }
+
+    .input-2 {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+
+    .input-3 {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+
+    .upload-container, .upload-area {
+        padding: 15px; 
+    }
+
+    .preview-container img {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media (min-width: 376px) and (max-width: 768px) {
+    .titulo-instrucoes h1 {
+        font-size: 2.5rem; 
+        text-align: center;
+    }
+
+    .txt-instrucoes {
+        font-size: 1.2rem; 
+    }
+
+    .form-dados input, 
+    .form-dados textarea, 
+    #categoria {
+        font-size: 1.2rem;
+        height: 45px; 
+    }
+
+    .continuar button {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .input-2, .input-3 {
+        grid-template-columns: 1fr 1fr; 
+        gap: 1.5rem;
+    }
+
+    .upload-container, .upload-area {
+        padding: 20px;
+    }
+
+    .preview-container img {
+        width: 90px;
+        height: 90px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        margin-top: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    .titulo-instrucoes h1 {
+        font-size: 2.8rem;
+    }
+
+    .txt-instrucoes {
+        font-size: 1.4rem;
+    }
+
+    .form-dados input, 
+    .form-dados textarea, 
+    #categoria {
+        font-size: 1.4rem;
+        height: 48px;
+    }
+
+    .continuar button {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+    }
+
+    .input-2 {
+        grid-template-columns: 1fr 1fr; 
+        gap: 2rem;
+    }
+
+    .input-3 {
+        grid-template-columns: 2fr 1fr; 
+        gap: 2rem;
+    }
+
+    .upload-container, .upload-area {
+        padding: 25px;
+    }
+
+    .preview-container img {
+        width: 100px;
+        height: 100px;
+    }
+}
