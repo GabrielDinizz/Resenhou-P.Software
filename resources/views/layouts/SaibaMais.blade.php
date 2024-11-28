@@ -12,10 +12,9 @@
 
 
 </head>
+ <x-header/>
 
-<body>
-    <x-header/>
-
+ <body>
     <div class="card-texto">
   <h1>Sobre Nós</h1>
   <p>
@@ -31,12 +30,33 @@
   <p>
     Nosso foco é proporcionar uma experiência única e simples para que os jovens possam se
     divertir e interagir em um ambiente seguro e dinâmico.
-  </p>
 </div>
-
-
-
-    <x-footer />
+<br>
+<h1>Nós</h1>
+<div class="container">
+    <div class="profile-card">
+        <img src="{{ asset('images/imagem1.jpg') }}" alt="Imagem de Pedro Aguiar">
+        <p>Pedro Aguiar</p>
+    </div>
+    <div class="profile-card">
+        <img src="{{ asset('images/imagem2.jpg') }}" alt="Imagem de Júlia Bispo">
+        <p>Júlia Bispo</p>
+    </div>
+    <div class="profile-card">
+        <img src="{{ asset('images/imagem3.jpg') }}" alt="Imagem de Felipe Costa">
+        <p>Felipe Costa</p>
+    </div>
+    <div class="profile-card">
+        <img src="{{ asset('images/imagem4.jpg') }}" alt="Imagem de Gabriel Diniz">
+        <p>Gabriel Diniz</p>
+    </div>
+    <div class="profile-card">
+        <img src="{{ asset('images/imagem6.jpg') }}" alt="Imagem de Daniel Augusto">
+        <p>Daniel Augusto</p>
+    </div>
+</div>
+<br>
+   
 </body>
-
+ <x-footer />
 </html>

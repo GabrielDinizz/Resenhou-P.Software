@@ -1,28 +1,177 @@
-/* Estilização isolada apenas para o card */
+/* Estilização geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Importação da fonte Days One */
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+/* Container que agrupa os profile cards */
+.container {
+  display: flex;
+  flex-direction: row; /* Alinha os cards na horizontal */
+  gap: 30px; /* Espaçamento entre os cards */
+  margin-top: 30px;
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%;
+  max-width: 1200px; /* Limita a largura do container */
+}
+
+/* Estilização dos profile cards */
+.profile-card {
+  display: flex; /* Organiza a imagem e o nome na horizontal */
+  align-items: center; /* Centraliza a imagem verticalmente com o texto */
+  background: linear-gradient( #9a2ecb, #a742d8, #b454e4, #c165f1, #ce76fe);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 15px; /* Espaçamento entre a imagem e o nome */
+}
+
+/* Estilização da imagem no card */
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Deixa a imagem circular */
+  object-fit: cover;
+}
+
+/* Estilização do nome */
+.profile-card p {
+  font-family: 'Days One', sans-serif; /* Fonte personalizada */
+  font-size: 18px;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Estilização do card-texto */
 .card-texto {
-    background-image: linear-gradient(to bottom, #9a2ecb, #a742d8, #b454e4,#c165f1, #ce76fe) ;
-    color: white; /* Letras brancas */
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center; /* Centraliza o texto dentro do card */
-    max-width: 800px; /* Largura máxima */
-    margin: 50px auto; /* Centraliza o card horizontalmente */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Sombra suave */
-    font-family: 'Arial', sans-serif; /* Fonte local apenas para o card */
+  background-image: linear-gradient(to bottom, #9a2ecb, #a742d8, #b454e4, #c165f1, #ce76fe);
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  font-family: 'Arial', sans-serif;
+}
+
+.card-texto h1 {
+  font-family: 'Days One', sans-serif !important; /* Fonte Days One aplicada ao h1 dentro do card-texto */
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-family: 'Days One', sans-serif !important; /* Fonte Days One aplicada ao h1 global */
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas menores que 768px (iPad, iPhone SE, etc.) */
+@media (max-width: 768px) {
+  /* Ajuste no layout dos profile cards */
+  .container {
+    flex-direction: column; /* Coloca os cards na vertical */
+    gap: 20px; /* Reduz o espaçamento entre os cards */
   }
-  
-  /* Títulos do card */
+
+  /* Ajuste no tamanho das imagens dos cards */
+  .profile-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Ajuste do tamanho do nome nos cards */
+  .profile-card p {
+    font-size: 16px;
+  }
+
+  /* Ajuste da largura do card-texto */
+  .card-texto {
+    width: 90%; /* Aumenta a largura em dispositivos móveis */
+    padding: 20px;
+  }
+
+  /* Ajuste do título do card-texto */
   .card-texto h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Pequena sombra */
+    font-size: 1.8rem;
   }
-  
-  /* Parágrafos do card */
+
+  /* Ajuste do h1 global em dispositivos pequenos */
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Para telas menores que 480px (iPhone SE e dispositivos muito pequenos) */
+@media (max-width: 480px) {
+  /* Ajustes adicionais para telas muito pequenas */
+  .container {
+    gap: 15px; /* Reduz o espaçamento entre os cards ainda mais */
+  }
+
+  /* Ajuste das imagens nos profile cards */
+  .profile-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Ajuste do texto no card-texto */
   .card-texto p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    font-size: 1rem;
   }
-  
+
+  /* Ajuste do título do card-texto */
+  .card-texto h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Ajuste do título global h1 */
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Para telas maiores que 1024px (Notebooks e dispositivos grandes) */
+@media (min-width: 1024px) {
+  /* Ajustes de espaçamento para telas grandes */
+  .container {
+    gap: 40px; /* Maior espaçamento entre os cards */
+  }
+
+  /* Ajuste da largura do card-texto */
+  .card-texto {
+    width: 70%; /* Reduz a largura do card-texto para uma tela maior */
+  }
+
+  /* Ajuste do título do card-texto */
+  .card-texto h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Ajuste do h1 global */
+  h1 {
+    font-size: 3rem;
+  }
+}

@@ -259,3 +259,41 @@ form {
 #avataratual{
     border: 2px solid #F7317D;
 }
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Empilha os itens de forma vertical */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    #infosec1, #infosec2 {
+        width: 100%; /* Ajusta as seções para ocuparem toda a largura */
+        margin: 0; /* Remove margens extras */
+    }
+
+    .info-section, .avatar-section {
+        width: 100%; /* As seções ocupam toda a largura disponível */
+        flex-direction: column; /* Organiza as informações verticalmente */
+    }
+
+    /* Ajuste para o avatar e outros elementos */
+    .avatar-preview img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Ajusta o tamanho dos botões */
+    .buttonsperfil, .buttonsperfil2 {
+        width: 80%; /* Faz os botões ocuparem 80% da tela */
+    }
+}
+
+/* Responsividade para dispositivos móveis menores (iPhone, telas muito pequenas) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Ajusta o espaçamento da container */
+    }
+
+    .buttonsperfil, .buttonsperfil2 {
+        width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+    }
+}

@@ -116,12 +116,3 @@
             });
         });
     </script>
-    <section class="event-banner">
-        <div class="event-content">
-            <h1 class="event-title"><span class="title-part1">CRIE SEU </span><span class="title-highlight">EVENTO!</span></h1>
-            <p class="event-subtitle">Clique no botão e faça seu evento personalizado!</p>
-        </div>
-        <div class="button-container">
-            <button class="create-event-btn">CRIAR EVENTO</button>
-        </div>
-    </section>
