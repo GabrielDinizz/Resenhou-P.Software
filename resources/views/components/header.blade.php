@@ -22,7 +22,7 @@
         </a>
         @if (Auth::check())
         <div>
-            <p><a href="{{ route('perfil') }}"><img id="imglogin" src="{{ asset(auth()->user()->avatar) }}"></a></p>
+        <p><a href="{{ route('perfil') }}"><img id="imglogin" src="{{ asset(auth()->check() && auth()->user()->avatar ? auth()->user()->avatar : 'assets/avatar2.png') }}"> </a>  </p>
 
 
         </div>
