@@ -81,7 +81,7 @@
                 @csrf
                 @method('PATCH')
                 <div id="avatar-selection">
-                    @foreach(['avatar1', 'avatar2', 'avatar3', 'avatar4'] as $avatar)
+                    @foreach(['avatar1', 'avatar2', 'avatar3'] as $avatar)
                         <label style="cursor: pointer;">
                             <input type="radio" name="avatar" value="{{ $avatar }}" onclick="submitAvatarForm()" style="display:none;">
                             <img class="avatar-image" src="{{ asset('assets/' . $avatar . '.png') }}" alt="Avatar {{ $avatar }}" style="width: 100px; margin: 10px;">
